@@ -160,6 +160,7 @@ section{padding:clamp(3rem,5.5vw,5rem) var(--pad);border-bottom:1px solid var(--
 .edu-course{font-family:var(--mono);font-size:.62rem;line-height:1.9;color:var(--faint);letter-spacing:.01em;border-top:1px solid var(--line);padding-top:1rem}
 .certs{display:flex;flex-direction:column;gap:.7rem}
 .cert{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-sm);display:flex;align-items:center;gap:.9rem;padding:1rem 1.1rem;transition:border-color .2s,transform .2s}
+a.cert{text-decoration:none;color:inherit}
 .cert:hover{border-color:var(--line-strong);transform:translateX(3px)}
 .cert-ico{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:.85rem;flex-shrink:0}
 .cert-name{font-family:var(--display);font-weight:700;font-size:clamp(.82rem,1.7vw,.94rem);margin-bottom:.15rem}
@@ -173,6 +174,10 @@ section{padding:clamp(3rem,5.5vw,5rem) var(--pad);border-bottom:1px solid var(--
 .ach-eyebrow{font-family:var(--mono);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.7rem}
 .ach-n{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--coral);line-height:1.1;margin-bottom:.5rem}
 .ach-txt{font-size:.82rem;line-height:1.65;color:var(--muted);font-weight:300}
+.ach-txt a{color:var(--ink);text-underline-offset:3px}
+.ach-txt a:hover{color:var(--amber)}
+.ach-link{font-family:var(--mono);font-size:.6rem;letter-spacing:.05em;color:var(--amber);text-decoration:none;display:inline-block;margin-top:.9rem}
+.ach-link:hover{text-decoration:underline}
 
 /* CONTACT */
 #contact{background:var(--surface);color:var(--ink);text-align:center;padding:clamp(3.5rem,7vw,6rem) var(--pad);border-bottom:none;position:relative;overflow:hidden}
@@ -181,7 +186,7 @@ section{padding:clamp(3rem,5.5vw,5rem) var(--pad);border-bottom:1px solid var(--
 .contact-title{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,8vw,5.6rem);line-height:1;letter-spacing:-.02em;margin-bottom:1.4rem}
 .contact-title em{font-style:normal;color:var(--amber)}
 .contact-sub{font-size:clamp(.86rem,1.7vw,1.02rem);color:var(--muted);font-weight:300;max-width:400px;margin:0 auto 2.2rem;line-height:1.75}
-.contact-email{display:inline-block;font-family:var(--mono);font-weight:600;font-size:clamp(.92rem,2.4vw,1.25rem);letter-spacing:.01em;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--line-strong);padding-bottom:.25rem;transition:border-color .2s,color .2s}
+.contact-email{display:inline-block;font-family:var(--mono);font-weight:600;font-size:clamp(.92rem,2.4vw,1.25rem);letter-spacing:.01em;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--line-strong);padding-bottom:.25rem;transition:border-color .2s,color .2s;word-break:break-all}
 .contact-email:hover{border-color:var(--amber);color:var(--amber)}
 .contact-phone{display:block;font-family:var(--mono);font-size:.78rem;color:var(--muted);margin-top:1rem;text-decoration:none}
 .contact-phone:hover{color:var(--ink)}
@@ -267,9 +272,9 @@ footer{background:var(--bg);color:var(--faint);padding:1.1rem var(--pad);display
   <h2 class="sec-title reveal">Engineering intelligence, not just <em>models</em></h2>
   <div class="about-grid">
     <div class="reveal">
-      <p class="about-text">I'm a <strong>Machine Learning & AI Engineer</strong> who builds end-to-end systems — multi-agent LLM pipelines, Retrieval-Augmented Generation, and production ML — using Python, FastAPI, LangGraph, and PyTorch.<br><br>
-      I recently graduated from <strong>Cairo University's Faculty of Computing & Artificial Intelligence</strong> with a 3.53 GPA, after leading engineering teams on two capstone systems: a 6-agent travel-planning platform and a medical RAG assistant grounded in 211,000 research abstracts.<br><br>
-      Outside of coursework, I've solved <span style="color:var(--ink)">550+ algorithmic problems</span> on Codeforces, LeetCode, and HackerRank — the same rigor I bring to debugging production pipelines.</p>
+      <p class="about-text">I'm a <strong>Machine Learning & AI Engineer</strong> focused on generative AI and RAG systems, building with Python, FastAPI, LangGraph, and frameworks like PyTorch and TensorFlow.<br><br>
+      I recently graduated from <strong>Cairo University's Faculty of Computing & Artificial Intelligence</strong> with a 3.53 GPA, and led two engineering teams from architecture through API development and deployment: a 6-agent travel-planning platform and a medical RAG assistant grounded in 211,000 research abstracts that reached 90.7% macro-F1.<br><br>
+      Outside of coursework, I've solved <span style="color:var(--ink)">550+ algorithmic problems</span> on Codeforces, LeetCode, and HackerRank and placed at two ECPC regionals — the same rigor I bring to debugging production pipelines.</p>
       <div class="lang-row">Arabic — Native &nbsp;·&nbsp; English — Professional</div>
     </div>
     <div class="reveal d2">
@@ -313,8 +318,9 @@ footer{background:var(--bg);color:var(--faint);padding:1.1rem var(--pad);display
         <div class="sk-item">Python · SQL · C++ · Java</div>
         <div class="sk-item">PyTorch · TensorFlow · scikit-learn · XGBoost</div>
         <div class="sk-item">Transformers — BioBERT, DistilBERT</div>
-        <div class="sk-item">LangChain · LangGraph · FAISS · BM25</div>
-        <div class="sk-item">FastAPI · Docker · Azure · MLflow · CI/CD</div>
+        <div class="sk-item">LangChain · LangGraph · FAISS · BM25 · ReAct</div>
+        <div class="sk-item">Pandas · NumPy · Power BI · PostgreSQL · SQL Server · SSIS</div>
+        <div class="sk-item">FastAPI · Docker · Azure · MLflow · CI/CD · Git</div>
       </div>
     </div>
     <div class="sk-col">
@@ -342,7 +348,7 @@ footer{background:var(--bg);color:var(--faint);padding:1.1rem var(--pad);display
       </div>
       <div class="exp-role">Machine Learning Engineer Trainee</div>
       <div class="exp-co" style="color:var(--amber)">Digital Egypt Pioneers Initiative (DEPI), MCIT</div>
-      <div class="exp-desc">Led a 5-member Agile team delivering the Healthcare RAG capstone — owning sprint planning, task allocation, and code review. Designed the backend architecture and deployment workflow, integrating retrieval, classification, and LLM generation into one production-ready application.</div>
+      <div class="exp-desc">Led a 5-person Agile team building a healthcare RAG assistant — owning sprint planning, task allocation, code reviews, and core technical decisions. Owned backend API development and the deployment pipeline for scalable model serving and experiment tracking, integrating retrieval, classification, and LLM generation into one production-ready application.</div>
       <div class="exp-tags">
         <span class="etag">FastAPI</span><span class="etag">Docker</span>
         <span class="etag">Azure</span><span class="etag">MLflow</span><span class="etag">Agile Leadership</span>
@@ -355,10 +361,10 @@ footer{background:var(--bg);color:var(--faint);padding:1.1rem var(--pad);display
       </div>
       <div class="exp-role">Machine Learning Intern</div>
       <div class="exp-co" style="color:var(--cyan)">Elevvo Pathways</div>
-      <div class="exp-desc">Built regression, classification, and clustering models across multiple real-world datasets under structured mentorship. Ran end-to-end pipelines — EDA, feature engineering, and cross-validation — to improve model generalization.</div>
+      <div class="exp-desc">Developed regression, classification, and clustering models in Python and scikit-learn across several real-world datasets, guided by structured mentorship. Ran full pipelines — EDA, feature engineering, and cross-validation — to improve model generalization.</div>
       <div class="exp-tags">
         <span class="etag">Regression</span><span class="etag">Classification</span>
-        <span class="etag">Clustering</span><span class="etag">EDA</span>
+        <span class="etag">Clustering</span><span class="etag">scikit-learn</span><span class="etag">EDA</span>
       </div>
     </div>
   </div>
@@ -410,12 +416,12 @@ footer{background:var(--bg);color:var(--faint);padding:1.1rem var(--pad);display
   <div class="proj-feature reveal d1">
     <div class="proj-line" style="background:var(--amber)"></div>
     <div class="proj-tag" style="color:var(--amber);border-color:rgba(231,172,82,.35)">Team Lead · 6-Member Team</div>
-    <div class="proj-title">TourMate AI — Multi-Agent Travel Planning Platform</div>
+    <div class="proj-title">TourMate AI — AI-Powered Travel Planning Platform</div>
     <div class="proj-meta">Graduation Project, Cairo University · 2025–2026</div>
     <div class="proj-lbl">Problem</div>
     <div class="proj-txt">Personalizing multi-destination travel means coordinating user profiling, live inventory, itinerary logic, and real-time booking across disconnected systems.</div>
     <div class="proj-lbl">Solution</div>
-    <div class="proj-txt">Architected a 6-stage multi-agent LangGraph pipeline powered by Gemini 2.5 Flash and Groq Llama 3.3 70B, wired into a full-stack platform (FastAPI, PostgreSQL, Redis, Flutter) with live Amadeus flight search and Stripe payments.</div>
+    <div class="proj-txt">Led the design of a 6-stage multi-agent LangGraph pipeline powered by Gemini 2.5 Flash and Groq Llama 3.3 70B, wired into a full-stack platform (FastAPI, PostgreSQL, Redis, Flutter) with live Amadeus flight search and Stripe payments. Refactored the AI engine into modular components for easier maintenance and extensibility.</div>
     <div class="pipe">
       <span class="pipe-node">Profile</span><span class="pipe-arrow">→</span>
       <span class="pipe-node">Retrieve</span><span class="pipe-arrow">→</span>
@@ -429,7 +435,7 @@ footer{background:var(--bg);color:var(--faint);padding:1.1rem var(--pad);display
       <span class="ptag">Redis</span><span class="ptag">Gemini 2.5 Flash</span><span class="ptag">Groq Llama 3.3</span>
       <span class="ptag">Amadeus</span><span class="ptag">Stripe</span><span class="ptag">Flutter</span>
     </div>
-    <a href="https://github.com/AbdooMatrix" target="_blank" rel="noopener" class="proj-link">View on GitHub ↗</a>
+    <a href="https://github.com/AbdelrahmanMatrix/TourMate-AI" target="_blank" rel="noopener" class="proj-link">View on GitHub ↗</a>
   </div>
 
   <div class="proj-grid">
@@ -441,7 +447,7 @@ footer{background:var(--bg);color:var(--faint);padding:1.1rem var(--pad);display
       <div class="proj-lbl">Problem</div>
       <div class="proj-txt">Clinicians and researchers need fast answers grounded in real medical literature, not LLM guesses.</div>
       <div class="proj-lbl">Solution</div>
-      <div class="proj-txt">Built a retrieval-augmented system over 211K PubMedQA records — BioBERT query classification, FAISS + BM25 hybrid retrieval, Cross-Encoder reranking, and grounded generation with Groq Llama 4 Scout.</div>
+      <div class="proj-txt">Architected a retrieval-augmented system over 211K PubMedQA records — BioBERT query classification, FAISS + BM25 hybrid retrieval, Cross-Encoder reranking, and grounded generation with Groq Llama 4 Scout.</div>
       <div class="chip-row">
         <span class="stat-chip" style="background:rgba(160,140,240,.1);border:1px solid rgba(160,140,240,.3);color:var(--violet)">0.80 BERTScore F1</span>
         <span class="stat-chip" style="background:rgba(160,140,240,.1);border:1px solid rgba(160,140,240,.3);color:var(--violet)">92% Faithfulness</span>
@@ -449,9 +455,10 @@ footer{background:var(--bg);color:var(--faint);padding:1.1rem var(--pad);display
       </div>
       <div class="proj-tools">
         <span class="ptag">LangChain</span><span class="ptag">FAISS</span><span class="ptag">BM25</span>
-        <span class="ptag">BioBERT</span><span class="ptag">Docker</span><span class="ptag">Azure</span><span class="ptag">MLflow</span>
+        <span class="ptag">BioBERT</span><span class="ptag">FastAPI</span><span class="ptag">Docker</span>
+        <span class="ptag">Azure</span><span class="ptag">MLflow</span><span class="ptag">Streamlit</span>
       </div>
-      <a href="https://github.com/AbdooMatrix" target="_blank" rel="noopener" class="proj-link">View on GitHub ↗</a>
+      <a href="https://github.com/AbdelrahmanMatrix/Healthcare-RAG-Powered-Medical-QA-Assistant" target="_blank" rel="noopener" class="proj-link">View on GitHub ↗</a>
     </div>
     <div class="proj reveal d3">
       <div class="proj-line" style="background:var(--cyan)"></div>
@@ -460,10 +467,11 @@ footer{background:var(--bg);color:var(--faint);padding:1.1rem var(--pad);display
       <div class="proj-lbl">Problem</div>
       <div class="proj-txt">Environmental data complexity makes accurate 7-class forest cover prediction difficult at scale.</div>
       <div class="proj-lbl">Solution</div>
-      <div class="proj-txt">Tuned tree-based models on the 581K-sample UCI Covertype dataset via feature scaling and stacking; XGBoost reached 97.1% accuracy and 0.94 macro-F1.</div>
+      <div class="proj-txt">Trained and tuned tree-based models on the 581K-sample UCI Covertype dataset; XGBoost reached 97.1% accuracy and 0.94 macro-F1.</div>
       <div class="proj-tools">
         <span class="ptag">Python</span><span class="ptag">scikit-learn</span><span class="ptag">XGBoost</span><span class="ptag">Random Forest</span>
       </div>
+      <a href="https://github.com/AbdelrahmanMatrix/Forest-Cover-Type-Classification" target="_blank" rel="noopener" class="proj-link">View on GitHub ↗</a>
     </div>
   </div>
 </section>
@@ -486,18 +494,18 @@ footer{background:var(--bg);color:var(--faint);padding:1.1rem var(--pad);display
       <div class="edu-course">Machine Learning · AI · Data Structures & Algorithms · Databases · Statistics · Linear Algebra</div>
     </div>
     <div class="certs reveal d2">
-      <div class="cert">
+      <a class="cert" href="https://coursera.org/share/436402401f7107ec6e04df759bd2d8a9" target="_blank" rel="noopener">
         <div class="cert-ico" style="background:rgba(231,172,82,.12);color:var(--amber)">S</div>
         <div><div class="cert-name">Machine Learning Specialization</div><div class="cert-issuer">Stanford University / Andrew Ng · Coursera</div></div>
-      </div>
-      <div class="cert">
+      </a>
+      <a class="cert" href="https://learn.nvidia.com/certificates?id=IdMQD3ZKSQCBsiWWQOus3w" target="_blank" rel="noopener">
         <div class="cert-ico" style="background:rgba(92,214,197,.12);color:var(--cyan)">N</div>
         <div><div class="cert-name">Building LLM Applications with Prompt Engineering</div><div class="cert-issuer">NVIDIA Deep Learning Institute</div></div>
-      </div>
-      <div class="cert">
+      </a>
+      <a class="cert" href="https://www.datacamp.com/completed/statement-of-accomplishment/track/a76d6c28d2847c46d99f8247cb085aa0a90996d8" target="_blank" rel="noopener">
         <div class="cert-ico" style="background:rgba(160,140,240,.12);color:var(--violet)">D</div>
         <div><div class="cert-name">Associate Data Scientist in Python</div><div class="cert-issuer">DataCamp</div></div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -510,17 +518,19 @@ footer{background:var(--bg);color:var(--faint);padding:1.1rem var(--pad);display
     <div class="ach-card">
       <div class="ach-eyebrow">Competitive Programming · 2022–Present</div>
       <div class="ach-n">550+</div>
-      <div class="ach-txt">Algorithmic problems solved on Codeforces, LeetCode, and HackerRank.</div>
+      <div class="ach-txt">Algorithmic problems solved across <a href="https://codeforces.com/profile/AbdoMatrix" target="_blank" rel="noopener">Codeforces</a>, <a href="https://leetcode.com/u/AbdoMatrix/" target="_blank" rel="noopener">LeetCode</a>, and <a href="https://www.hackerrank.com/profile/AbdoMatrix" target="_blank" rel="noopener">HackerRank</a>.</div>
     </div>
     <div class="ach-card">
       <div class="ach-eyebrow">ECPC 2023 Regionals</div>
       <div class="ach-n">84th Place</div>
       <div class="ach-txt">Egyptian Collegiate Programming Contest — regional standings.</div>
+      <a href="https://drive.google.com/file/d/1Hweyjo9KNVPjFmmRsKPvAN5cMZYB-uOR/view?usp=sharing" target="_blank" rel="noopener" class="ach-link">View certificate ↗</a>
     </div>
     <div class="ach-card">
-      <div class="ach-eyebrow">ECPC 2025 Regionals</div>
+      <div class="ach-eyebrow">ECPC 2024 Regionals</div>
       <div class="ach-n">Honorable Mention</div>
       <div class="ach-txt">Egyptian Collegiate Programming Contest — regional standings.</div>
+      <a href="https://drive.google.com/file/d/1kLLQZNBpeQ46Sg_qaXIKN-Rg2OSnvojL/view?usp=sharing" target="_blank" rel="noopener" class="ach-link">View certificate ↗</a>
     </div>
   </div>
 </section>
@@ -530,11 +540,11 @@ footer{background:var(--bg);color:var(--faint);padding:1.1rem var(--pad);display
   <div class="contact-eyebrow">Contact</div>
   <div class="contact-title reveal">Let's Build<br><em>Something</em><br>Great</div>
   <p class="contact-sub reveal d1">Have a project or an opening? I'm available for freelance work and full-time roles.</p>
-  <a href="mailto:abdomostafa20188@gmail.com" class="contact-email reveal d2">abdomostafa20188@gmail.com</a>
+  <a href="mailto:abdelrahman.m.sayed.33@gmail.com" class="contact-email reveal d2">abdelrahman.m.sayed.33@gmail.com</a>
   <a href="tel:+201125016702" class="contact-phone reveal d2">+20 112 501 6702</a>
   <div class="contact-socials reveal d3">
-    <a href="https://github.com/AbdooMatrix" target="_blank" rel="noopener" class="social-lnk">GitHub</a>
-    <a href="https://linkedin.com/in/abdelrahman-matrix" target="_blank" rel="noopener" class="social-lnk">LinkedIn</a>
+    <a href="https://github.com/AbdelrahmanMatrix" target="_blank" rel="noopener" class="social-lnk">GitHub</a>
+    <a href="https://www.linkedin.com/in/abdelrahman-mostafa33/" target="_blank" rel="noopener" class="social-lnk">LinkedIn</a>
   </div>
 </section>
 
