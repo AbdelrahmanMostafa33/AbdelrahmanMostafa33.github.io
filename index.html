@@ -9,46 +9,58 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Abdelrahman Mostafa — AI Engineer">
 <meta property="og:description" content="AI that stays grounded in evidence. RAG systems, agentic workflows and honest evaluation.">
+<!-- og:image needs a full URL to work when shared, e.g. https://USERNAME.github.io/REPO/assets/profile.jpg -->
 <meta property="og:image" content="assets/profile.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232E5DE6'/%3E%3Ctext x='32' y='42' font-size='28' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EAM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Abdelrahman Mostafa","jobTitle":"AI Engineer","alumniOf":"Cairo University","sameAs":["https://github.com/AbdelrahmanMostafa33","https://www.linkedin.com/in/abdelrahman-mostafa33/"]}</script>
+<script>
+/* Image fallback: try each name in data-alt (other extensions / casing), then remove the image (or its whole slide). */
+function fb(i){var a=(i.dataset.alt||'').split(',').filter(Boolean);if(a.length){i.dataset.alt=a.slice(1).join(',');i.src=a[0]}else(i.closest('.sl')||i).remove()}
+</script>
 <style>
 :root{--w:#fff;--mist:#f5f5f7;--well:#E6EDFD;--hair:#d6d6d6;--ink:#071039;--slate:#66666b;--link:#1A3BB0;--cta:#2E5DE6;--org:#b64400;--pad:clamp(1.25rem,5vw,4rem);--f:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Inter','Helvetica Neue',Arial,sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:60px}
 body{background:var(--w);color:var(--ink);font:400 17px/1.47 var(--f);letter-spacing:-.022em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%}
 a{color:inherit;text-decoration:none}
 a:focus-visible,button:focus-visible,.car:focus-visible{outline:2px solid var(--cta);outline-offset:3px;border-radius:6px}
-nav{position:fixed;inset:0 0 auto;z-index:50;height:48px;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0 var(--pad);background:rgba(255,255,255,.82);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-bottom:1px solid transparent;transition:border-color .3s}
+nav{position:fixed;inset:0 0 auto;z-index:50;height:48px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;padding:0 max(var(--pad),calc((100% - 1080px)/2));background:rgba(255,255,255,.82);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-bottom:1px solid transparent;transition:border-color .3s}
 nav.s{border-color:var(--hair)}
-.nm{font:600 19px var(--f);letter-spacing:.012em}
+.nm{font:600 19px var(--f);letter-spacing:.012em;white-space:nowrap}
 nav ul{display:flex;gap:1.8rem;list-style:none}
 nav ul a{font-size:12px;opacity:.8;transition:opacity .2s}nav ul a:hover{opacity:1}
-.np{display:flex;gap:.5rem}
-.pl{display:inline-flex;align-items:center;gap:.3rem;padding:.4rem .9rem;border-radius:9999px;font-size:12px;line-height:16px;border:1px solid transparent;cursor:pointer;font-family:var(--f);letter-spacing:inherit;transition:background .2s}
+.np{display:flex;gap:.5rem;justify-self:end}
+.pl{display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.4rem .9rem;border-radius:9999px;font-size:12px;line-height:16px;border:1px solid transparent;cursor:pointer;font-family:var(--f);letter-spacing:inherit;white-space:nowrap;transition:background .2s}
 .pl.b{background:var(--cta);color:#fff}.pl.b:hover{background:var(--link)}
 .pl.o{border-color:var(--ink);color:var(--ink);background:transparent}.pl.o:hover{background:var(--well)}
-.pl.lg{font-size:17px;line-height:24px;padding:.65rem 1.4rem}
+.pl.lg{font-size:17px;line-height:24px;padding:.65rem 1.4rem;white-space:normal;max-width:100%;overflow-wrap:anywhere;text-align:center}
 .ln{color:var(--link)}.ln::after{content:' ›'}.ln:hover{text-decoration:underline}
 .fu{animation:up 1s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:calc(var(--i,0)*100ms)}
 .rv{opacity:0}.rv.on{opacity:1;animation:up 1s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:calc(var(--i,0)*90ms)}
 @keyframes up{from{opacity:0;translate:0 28px}}
-#top{padding:calc(48px + clamp(1.5rem,4vw,3rem)) var(--pad) 0;text-align:center}
-.av{position:relative;width:128px;height:128px;margin:0 auto 1rem;border-radius:50%;background:var(--well);overflow:hidden}
-.av img,.pt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;mix-blend-mode:multiply}
+#top{padding:calc(48px + clamp(1.5rem,4vw,3rem)) var(--pad) clamp(2rem,5vw,3.5rem);text-align:center}
+/* Photo frames: initials sit behind the photo, so if the file is missing you get a clean "AM" badge instead of an empty circle */
+.av,.pt{display:grid;place-items:center;background:var(--well);overflow:hidden;font:600 2.2rem var(--f);letter-spacing:0;color:var(--link)}
+.av::before,.pt::before{content:'AM'}
+.pt{font-size:4rem}
+.av{position:relative;width:128px;height:128px;margin:0 auto 1rem;border-radius:50%}
+.av img,.pt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%}
 .st{font:600 12px/16px var(--f);color:var(--org);margin-bottom:.9rem}
-.kk{font:600 21px/1 var(--f);letter-spacing:.011em;display:inline-flex;align-items:center;gap:.6rem;margin-bottom:1rem}
+.kk{font:600 21px/1.2 var(--f);letter-spacing:.011em;display:inline-flex;align-items:center;gap:.6rem;margin-bottom:1rem}
 .kk img{width:36px;height:36px}
 h1{font:600 clamp(2.6rem,8vw,5rem)/1.05 var(--f);letter-spacing:-.015em;max-width:920px;margin:0 auto 1.4rem}
 .sub{font-size:clamp(1.1rem,2.2vw,1.3rem);line-height:1.25;color:var(--slate);max-width:660px;margin:0 auto 1.4rem}
 .cta{display:flex;gap:1.4rem;justify-content:center;align-items:center;flex-wrap:wrap}
-.ph{--c:clamp(130px,26vw,250px);position:relative;max-width:900px;height:calc(var(--c)*1.95);margin:clamp(1.5rem,4vw,2.5rem) auto 0;overflow:hidden}
-.ph img{position:absolute;top:calc(var(--c)*.14);left:50%;width:calc(var(--c)*.84);z-index:1;translate:0 calc(var(--sy,0)*.06px)}
+/* Hero phones: the centre phone sets the height, so it is always shown in full; side phones sit behind it */
+.ph{--c:clamp(130px,26vw,250px);position:relative;max-width:900px;margin:clamp(1.5rem,4vw,2.5rem) auto 0;overflow:hidden}
+.ph img{display:block;height:auto}
+.ph .p1,.ph .p3{position:absolute;bottom:0;left:50%;width:calc(var(--c)*.84);z-index:1}
 .ph .p1{transform:translateX(calc(-50% - var(--c)*.794))}
 .ph .p3{transform:translateX(calc(-50% + var(--c)*.794))}
-.ph .p2{top:0;width:var(--c);z-index:2;transform:translateX(-50%);translate:none}
+.ph .p2{position:relative;width:var(--c);margin:0 auto;z-index:2}
 section,.band{padding:clamp(3rem,6vw,4.5rem) var(--pad)}
 .band{background:var(--mist)}
 .w{max-width:1080px;margin:0 auto}
@@ -57,26 +69,28 @@ h3{font:600 28px/1.14 var(--f);letter-spacing:0}
 .ci{text-align:center;max-width:780px;margin:0 auto 2rem}
 .ci h2{margin-bottom:1.1rem}
 .ci p{font-size:clamp(1.1rem,2.2vw,1.3rem);line-height:1.3;color:var(--slate);margin-bottom:1.6rem}
+.ci .kk{font:600 21px/1.2 var(--f);letter-spacing:.011em;color:var(--ink);margin-bottom:.9rem}
 .mt{font-size:12px;line-height:16px;color:var(--slate);margin-bottom:.8rem}
 .car{--e:var(--pad);display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 var(--e);scrollbar-width:none;margin:0 calc(var(--pad)*-1);padding:0 var(--e)}
 .car::-webkit-scrollbar{display:none}
-.sl{position:relative;flex:0 0 clamp(280px,24vw,420px);aspect-ratio:1/1.5;background:var(--w);border-radius:28px;overflow:hidden;scroll-snap-align:start}
-.sl .tx{padding:28px 28px 0;position:relative;z-index:1}
+.sl{display:flex;flex-direction:column;flex:0 0 clamp(280px,24vw,420px);background:var(--w);border-radius:28px;overflow:hidden;scroll-snap-align:start}
+.sl .tx{padding:28px 28px 0}
 .sl h3{font-size:26px;margin-bottom:.45rem}
 .sl p{font-size:17px;line-height:1.3;color:var(--slate)}
-.sl img{position:absolute;left:50%;bottom:0;width:70%;translate:-50% 27%}
+.sl .im{margin-top:16px;padding-bottom:28px}
+.sl img{display:block;width:76%;height:auto;margin:0 auto}
 .ctl{display:flex;gap:2px;padding:4px;border-radius:36px;background:rgba(210,210,215,.64);width:max-content;margin:2rem auto 0}
 .ctl button{width:36px;height:36px;border:0;border-radius:50%;background:transparent;color:rgba(0,0,0,.56);font-size:20px;cursor:pointer;transition:background .2s}
 .ctl button:hover{background:#fff}
-.sp{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.5rem,4vw,3rem);margin-top:2.5rem}
+.sp{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.5rem,4vw,3rem);margin-top:2.5rem;text-align:center}
 .sp.s4{grid-template-columns:repeat(4,1fr);margin-top:2rem}
 .sp>div{border-top:1px solid var(--hair);padding-top:1.2rem}
 .sp b{display:block;font:600 28px/1.15 var(--f);letter-spacing:0;margin-bottom:.3rem}
 .sp b.n{font-size:clamp(2.4rem,5vw,3rem);line-height:1}
 .sp span{color:var(--slate);font-size:15px;line-height:1.4;display:block}
-.dg{background:var(--mist);border-radius:28px;padding:clamp(1.2rem,4vw,3rem);position:relative;overflow:hidden}
-.dg>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:var(--mist);z-index:2}
-.fl{display:grid;grid-template-columns:repeat(4,1fr) 1.25fr;gap:12px}
+.dg{background:var(--mist);border-radius:28px;padding:clamp(1.2rem,4vw,3rem)}
+.dg>img{display:block;width:100%;height:auto;margin-top:1.2rem;border-radius:16px}
+.fl{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
 .fl .o{display:grid;gap:12px}
 .stp{background:#fff;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:.35rem;animation:nd 7s infinite;animation-delay:calc(var(--i)*.8s)}
 .stp small{font-size:12px;opacity:.6}
@@ -92,10 +106,11 @@ h3{font:600 28px/1.14 var(--f);letter-spacing:0}
 .cd .ln{margin-top:auto;font-size:14px}
 .ab{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center}
 .ab h2{margin-bottom:1.2rem}.ab p{color:var(--slate);margin-bottom:1rem}
-.pt{position:relative;aspect-ratio:4/5;border-radius:28px;background:var(--well);overflow:hidden}
+.pt{position:relative;aspect-ratio:4/5;border-radius:28px;width:100%}
 .stats{display:flex;gap:clamp(1.5rem,5vw,3rem);flex-wrap:wrap;margin:1.6rem 0}
 .stats strong{display:block;font:600 40px/1 var(--f);letter-spacing:0}
 .stats span{font-size:14px;color:var(--slate)}
+.h2c{text-align:center}
 .row{display:grid;grid-template-columns:1fr 2fr;gap:clamp(1rem,5vw,4rem);padding:1.6rem 0;border-top:1px solid var(--hair)}
 .row h3{font-size:21px;letter-spacing:.011em}
 .row .or{color:var(--slate);margin-bottom:.6rem}
@@ -108,14 +123,15 @@ h3{font:600 28px/1.14 var(--f);letter-spacing:0}
 #contact{text-align:center}
 #contact h2{font-size:clamp(2.2rem,6vw,3.5rem);margin-bottom:1rem}
 #contact p{color:var(--slate);max-width:460px;margin:0 auto 1.8rem}
-.so{display:flex;justify-content:center;gap:1.8rem;flex-wrap:wrap;margin-top:1.8rem;font-size:15px}
-footer{border-top:1px solid var(--hair);padding:1.4rem var(--pad);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:12px;color:var(--slate)}
+.so{display:flex;justify-content:center;gap:.6rem 1.8rem;flex-wrap:wrap;margin-top:1.8rem;font-size:15px}
+footer{border-top:1px solid var(--hair);padding:1.4rem max(var(--pad),calc((100% - 1080px)/2));display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:12px;color:var(--slate)}
 dialog{border:0;border-radius:28px;padding:0;width:min(960px,92vw);aspect-ratio:16/9;overflow:hidden;background:#000;margin:auto}
 dialog::backdrop{background:rgba(0,0,0,.6)}
 dialog iframe{width:100%;height:100%;border:0}
 .x{position:absolute;top:12px;right:12px;z-index:3;width:36px;height:36px;border:0;border-radius:50%;background:rgba(210,210,215,.8);font-size:16px;cursor:pointer}
-@media(max-width:860px){nav ul{display:none}.sp,.g3,.ab,.row{grid-template-columns:1fr}.sp.s4,.g4{grid-template-columns:1fr 1fr}.fl{grid-template-columns:1fr}.pt{max-width:380px}.sl{flex-basis:min(340px,80vw)}}
-@media(max-width:520px){.g4,.sp.s4{grid-template-columns:1fr}}
+@media(max-width:1000px){.sp.s4,.g4{grid-template-columns:1fr 1fr}}
+@media(max-width:860px){nav{grid-template-columns:1fr auto}nav ul{display:none}.sp,.g3,.ab,.row{grid-template-columns:1fr}.pt{max-width:380px;margin:0 auto}.sl{flex-basis:min(340px,80vw)}.ab{text-align:center}.stats{justify-content:center}}
+@media(max-width:520px){.g4,.sp.s4{grid-template-columns:1fr}.nm{font-size:15px}.np{gap:.35rem}.pl{padding:.35rem .7rem}.pl.lg{font-size:15px;padding:.6rem 1.1rem}footer{flex-direction:column;align-items:center;text-align:center}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1}html{scroll-behavior:auto}}
 </style>
 <noscript><style>.rv{opacity:1}</style></noscript>
@@ -128,13 +144,13 @@ dialog iframe{width:100%;height:100%;border:0}
 </nav>
 
 <header id="top">
-  <div class="av fu"><img src="assets/profile.jpg" alt="Abdelrahman Mostafa" width="128" height="128"></div>
+  <div class="av fu"><img src="assets/profile.jpg" data-alt="assets/profile.jpeg,assets/profile.png,assets/profile.webp,assets/Profile.jpg,assets/Profile.jpeg,assets/profile.JPG" alt="Abdelrahman Mostafa" width="128" height="128" fetchpriority="high" onerror="fb(this)"></div>
   <p class="st fu" style="--i:1">Open to full-time &amp; freelance</p>
   <p class="kk fu" style="--i:2">Abdelrahman Mostafa</p>
   <h1 class="fu" style="--i:3">AI that stays grounded in evidence.</h1>
   <p class="sub fu" style="--i:4">AI Engineer working on Generative AI, LLMs and RAG. I lead teams that ship, and I build systems that show their sources.</p>
   <div class="cta fu" style="--i:5"><a class="pl b lg" href="#work">View my work</a><a class="ln" href="Abdelrahman-Mostafa-CV.pdf">Download CV</a></div>
-  <div class="ph fu" style="--i:6"><img class="p1" src="assets/tm-chat.webp" alt="TourMate AI chat screen"><img class="p2" src="assets/tm-itinerary.webp" alt="TourMate AI itinerary screen"><img class="p3" src="assets/tm-flights.webp" alt="TourMate AI flights screen"></div>
+  <div class="ph fu" style="--i:6"><img class="p1" src="assets/tm-chat.webp" alt="TourMate AI chat screen" onerror="fb(this)"><img class="p2" src="assets/tm-itinerary.webp" data-alt="assets/tm-plan.webp" alt="TourMate AI itinerary screen" onerror="fb(this)"><img class="p3" src="assets/tm-flights.webp" alt="TourMate AI flights screen" onerror="fb(this)"></div>
 </header>
 
 <section id="about" class="band">
@@ -148,13 +164,13 @@ dialog iframe{width:100%;height:100%;border:0}
         <div><strong data-n="2">2</strong><span>Teams led</span></div>
       </div>
     </div>
-    <div class="pt rv" style="--i:2"><img src="assets/profile.jpg" alt="Portrait of Abdelrahman Mostafa" loading="lazy"></div>
+    <div class="pt rv" style="--i:2"><img src="assets/profile.jpg" data-alt="assets/profile.jpeg,assets/profile.png,assets/profile.webp,assets/Profile.jpg,assets/Profile.jpeg,assets/profile.JPG" alt="Portrait of Abdelrahman Mostafa" loading="lazy" onerror="fb(this)"></div>
   </div>
 </section>
 
 <section id="work" style="padding-bottom:1.5rem">
   <div class="ci">
-    <p class="kk rv"><img src="assets/tm-logo.webp" alt="">TourMate AI</p>
+    <p class="kk rv"><img src="assets/tm-logo.webp" alt="" onerror="fb(this)">TourMate AI</p>
     <h2 class="rv" style="--i:1">Plan the whole trip in one conversation.</h2>
     <p class="rv" style="--i:2">A travel platform built as my Cairo University graduation project. I led a team of six; the app turns a chat into an itinerary, then finds flights and takes payment.</p>
     <div class="cta rv" style="--i:3"><a class="pl b lg" data-demo href="https://drive.google.com/file/d/16zuxxu9YC1H8s7IxNZ5Pye_xYIf_IUpX/view?usp=sharing" target="_blank" rel="noopener">Watch the demo</a><a class="ln" href="https://github.com/AbdelrahmanMostafa33/TourMate-AI" target="_blank" rel="noopener">GitHub</a></div>
@@ -218,7 +234,7 @@ dialog iframe{width:100%;height:100%;border:0}
 
 <section id="experience">
   <div class="w">
-    <h2 class="rv" style="margin-bottom:2.5rem">Experience.</h2>
+    <h2 class="rv h2c" style="margin-bottom:2.5rem">Experience.</h2>
     <div class="row rv"><div><div class="mt">Nov 2025 – Jul 2026</div><h3>ML Engineer Trainee</h3><p class="or">DEPI (Microsoft ML Track)</p></div>
       <ul><li>Led a 5-person Agile team through nine months of sprints: planning, task allocation and code reviews.</li><li>Owned the FastAPI backend, Docker containerization and GitHub Actions CI/CD for the Healthcare RAG capstone, and contributed to testing and evaluation.</li></ul></div>
     <div class="row rv"><div><div class="mt">Sep 2025 – Oct 2025</div><h3>Machine Learning Intern</h3><p class="or">Elevvo Pathways</p></div>
@@ -228,7 +244,7 @@ dialog iframe{width:100%;height:100%;border:0}
 
 <section id="skills" class="band">
   <div class="w">
-    <h2 class="rv" style="margin-bottom:2.5rem">Tech specs.</h2>
+    <h2 class="rv h2c" style="margin-bottom:2.5rem">Tech specs.</h2>
     <div class="row rv"><h3>Generative AI &amp; LLMs</h3><p>RAG · LangGraph · LangChain · Prompt engineering · FAISS · Cross-encoder reranking · Citation validation · Gemini · Groq / Cerebras</p></div>
     <div class="row rv"><h3>Machine Learning</h3><p>scikit-learn · XGBoost · Pandas · NumPy · Feature engineering · Cross-validation · SMOTE</p></div>
     <div class="row rv"><h3>Backend &amp; DevOps</h3><p>FastAPI · PostgreSQL · Redis · Docker · GitHub Actions · MLflow · Git</p></div>
@@ -263,14 +279,14 @@ dialog iframe{width:100%;height:100%;border:0}
 <dialog id="dlg"><button class="x" id="dx" aria-label="Close video">✕</button><iframe id="fr" title="TourMate AI demo" allow="autoplay;fullscreen" allowfullscreen></iframe></dialog>
 
 <script>
-const $=s=>[...document.querySelectorAll(s)],RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
-addEventListener('scroll',()=>{nav.classList.toggle('s',scrollY>8);if(!RM)document.documentElement.style.setProperty('--sy',Math.min(scrollY,700))},{passive:true});
-function count(el){if(RM)return;const to=+el.dataset.n,f=+el.dataset.f||0,s=el.dataset.s||'';let t0;const st=t=>{t0??=t;const p=Math.min((t-t0)/1400,1);el.textContent=(to*(1-Math.pow(1-p,3))).toFixed(f)+s;p<1&&requestAnimationFrame(st)};requestAnimationFrame(st)}
+const $=s=>[...document.querySelectorAll(s)];
+addEventListener('scroll',()=>nav.classList.toggle('s',scrollY>8),{passive:true});
+function count(el){if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;const to=+el.dataset.n,f=+el.dataset.f||0,s=el.dataset.s||'';let t0;const st=t=>{t0??=t;const p=Math.min((t-t0)/1400,1);el.textContent=(to*(1-Math.pow(1-p,3))).toFixed(f)+s;p<1&&requestAnimationFrame(st)};requestAnimationFrame(st)}
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('on');e.target.querySelectorAll('[data-n]').forEach(count);io.unobserve(e.target)}),{threshold:.12});
 $('.rv').forEach(el=>io.observe(el));
 const D='https://drive.google.com/file/d/16zuxxu9YC1H8s7IxNZ5Pye_xYIf_IUpX/';
 const S=[['Just say where.','Describe a trip in plain language.','chat'],['A day-by-day plan.','Itineraries shaped by your travel style.','itinerary'],['Real flights.','Search flights without leaving the chat.','flights'],['Pick a hotel.','Compare stays for your trip.','hotels'],['Pay in the chat.','Confirm the trip and pay, Stripe sandbox.','booking'],['See it on the map.','Every stop, routed.','map'],['Explore places.','Browse places by city.','explore']];
-car.innerHTML=S.map(([t,d,i])=>`<article class="sl"><div class="tx"><h3>${t}</h3><p>${d}</p></div><img src="assets/tm-${i}.webp" alt="TourMate AI: ${t}" loading="lazy"></article>`).join('');
+car.innerHTML=S.map(([t,d,i])=>`<article class="sl"><div class="tx"><h3>${t}</h3><p>${d}</p></div><div class="im"><img src="assets/tm-${i}.webp" ${i==='itinerary'?'data-alt="assets/tm-plan.webp" ':''}alt="TourMate AI: ${t}" loading="lazy" onerror="fb(this)"></div></article>`).join('');
 const go=d=>car.scrollBy({left:d*(car.firstElementChild.offsetWidth+20),behavior:'smooth'});
 pv.onclick=()=>go(-1);nx.onclick=()=>go(1);
 document.addEventListener('click',e=>{if(!e.target.closest('[data-demo]'))return;e.preventDefault();fr.src=D+'preview';dlg.showModal()});
