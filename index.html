@@ -3,25 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Abdelrahman Mostafa — AI Engineer</title>
+<title>Abdelrahman Mostafa — AI Engineer | LLM &amp; RAG Systems</title>
 <meta name="description" content="Abdelrahman Mostafa — AI Engineer building LLM and RAG systems. TourMate AI, Healthcare RAG Assistant and more.">
 <meta name="theme-color" content="#ffffff">
-<link rel="preload" as="image" href="assets/avatar.jpg" fetchpriority="high">
+<meta name="author" content="Abdelrahman Mostafa">
+<link rel="canonical" href="https://abdelrahmanmostafa33.github.io/">
+<link rel="preload" as="image" href="assets/avatar.webp" type="image/webp" fetchpriority="high">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Abdelrahman Mostafa">
+<meta property="og:url" content="https://abdelrahmanmostafa33.github.io/">
 <meta property="og:title" content="Abdelrahman Mostafa — AI Engineer">
 <meta property="og:description" content="AI that stays grounded in evidence. RAG systems, agentic workflows and honest evaluation.">
-<!-- og:image needs a full URL to work when shared, e.g. https://USERNAME.github.io/REPO/assets/profile.jpg -->
-<meta property="og:image" content="assets/profile.jpg">
+<meta property="og:image" content="https://abdelrahmanmostafa33.github.io/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Abdelrahman Mostafa, AI Engineer. AI that stays grounded in evidence.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Abdelrahman Mostafa — AI Engineer">
+<meta name="twitter:description" content="AI that stays grounded in evidence. RAG systems, agentic workflows and honest evaluation.">
+<meta name="twitter:image" content="https://abdelrahmanmostafa33.github.io/assets/og-image.jpg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230071e3'/%3E%3Ctext x='32' y='42' font-size='28' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EAM%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Abdelrahman Mostafa","jobTitle":"AI Engineer","alumniOf":"Cairo University","sameAs":["https://github.com/AbdelrahmanMostafa33","https://www.linkedin.com/in/abdelrahman-mostafa33/"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Abdelrahman Mostafa","url":"https://abdelrahmanmostafa33.github.io/","image":"https://abdelrahmanmostafa33.github.io/assets/profile.webp","jobTitle":"AI Engineer","address":{"@type":"PostalAddress","addressLocality":"Giza","addressCountry":"EG"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Cairo University"},"knowsAbout":["Retrieval-augmented generation","Large language models","LangGraph","Machine learning","FastAPI"],"sameAs":["https://github.com/AbdelrahmanMostafa33","https://www.linkedin.com/in/abdelrahman-mostafa33/"]}</script>
 <script>
-/* Image fallback: try each name in data-alt (other extensions / casing), then remove the image (or its whole slide). */
-setTimeout(function(){document.documentElement.classList.add('ready')},4000);
-function fb(i){var a=(i.dataset.alt||'').split(',').filter(Boolean);if(a.length){i.dataset.alt=a.slice(1).join(',');i.src=a[0];return}console.warn('Image not found: '+i.getAttribute('src'));var p=i.parentElement;(i.closest('.sl')||i).remove();if(p&&/\b(av|pt)\b/.test(p.className))p.classList.add('nopic')}
+/* If an image fails to load, remove it (or its whole slide) instead of leaving a broken icon. */
+setTimeout(function(){document.documentElement.classList.add('ready')},2500);
+function fb(i){console.warn('Image not found: '+i.getAttribute('src'));var p=i.parentElement;(i.closest('.sl')||i).remove();if(p&&/\b(av|pt)\b/.test(p.className))p.classList.add('nopic')}
 </script>
 <style>
+@font-face{font-family:Inter;font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 :root{--w:#fff;--mist:#f5f5f7;--well:#e6e6e8;--steel:#86868b;--hair:#d6d6d6;--ink:#1d1d1f;--slate:#707070;--link:#0066cc;--cta:#0071e3;--org:#b64400;--pad:clamp(1.25rem,5vw,4rem);--f:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Inter','Helvetica Neue',Arial,sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:60px}
@@ -104,10 +114,10 @@ h3{font:600 28px/1.14 var(--f);letter-spacing:0}
 .tabs button:hover{color:var(--ink)}
 .tabs button[aria-selected=true]{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
 .vc{text-align:center;color:var(--slate);font-size:16px;line-height:1.4;max-width:560px;min-height:2.8em;margin:0 auto 1.4rem;text-wrap:pretty}
-.vp{max-width:780px;margin:0 auto;border-radius:20px;overflow:hidden;background:#f2f6fb;box-shadow:0 0 0 1px rgba(0,0,0,.07),0 24px 60px rgba(0,0,0,.12)}
+.vp{max-width:920px;margin:0 auto;border-radius:20px;overflow:hidden;background:#f2f6fb;box-shadow:0 0 0 1px rgba(0,0,0,.07),0 24px 60px rgba(0,0,0,.12)}
 .vp .bar{height:34px;background:#e4eaf3;display:flex;align-items:center;gap:7px;padding:0 14px}
 .vp .bar i{width:11px;height:11px;border-radius:50%;background:#c3ccd9}
-.vs{position:relative;aspect-ratio:1005/1546;overflow:hidden;transition:height .35s ease}
+.vs{position:relative;aspect-ratio:1159/1858;overflow:hidden;transition:height .35s ease}
 .vs img{position:absolute;top:0;left:0;width:100%;height:auto;opacity:0;transition:opacity .35s}
 .vs img.act{opacity:1}
 .fl.mini{display:grid;grid-template-columns:repeat(6,1fr);gap:22px;margin-top:0}
@@ -182,26 +192,47 @@ h1,h2{text-wrap:balance}
 @media(max-width:520px){.fl .o{grid-template-columns:1fr}.fl .o .stp+.stp::before{display:none}}
 @media(max-width:860px){nav{grid-template-columns:1fr auto}nav ul{display:none}.sp,.g3,.ab,.row{grid-template-columns:1fr}.pt{max-width:380px;margin:0 auto}.car{--cw:min(290px,78vw)}.ab{text-align:center}.stats{justify-content:center}}
 @media(max-width:520px){.g4,.sp.s4{grid-template-columns:1fr}.nm{font-size:15px}.np{gap:.35rem}.pl{padding:.35rem .7rem}.pl.lg{font-size:15px;padding:.6rem 1.1rem}footer{flex-direction:column;align-items:center;text-align:center}}
+/* --- polish layer --- */
+html{-webkit-text-size-adjust:100%}
+.av{box-shadow:0 0 0 1px rgba(0,0,0,.1)}
+.skip{position:fixed;left:1rem;top:-100px;z-index:100;background:var(--ink);color:#fff;padding:.6rem 1.1rem;border-radius:9999px;font-size:14px;transition:top .2s}.skip:focus{top:.6rem}
+nav ul a{opacity:.72}nav ul a:hover,nav ul a[aria-current=true]{opacity:1}
+nav ul a[aria-current=true]{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+.lbl{color:var(--slate)}
+.stp small{opacity:.75}
+.ctl button:disabled{opacity:.35;cursor:default;background:transparent}
+.cd{gap:.45rem}.cd em{margin-bottom:.6rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;align-self:start}
+.chips span{padding:.38rem .9rem;border-radius:9999px;background:#fff;font-size:14px;line-height:20px;letter-spacing:-.012em;color:var(--ink);box-shadow:0 0 0 1px var(--hair)}
+.vp{cursor:zoom-in}
+.zm{display:flex;justify-content:center;margin-top:1.1rem}
+dialog.lb{aspect-ratio:auto;background:#fff;width:min(1060px,94vw)}
+.lbs{overflow:auto;max-height:92vh;overscroll-behavior:contain}
+.lbs img{display:block;width:100%;min-width:760px;height:auto}
+@media(max-width:520px){.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.stats strong{font-size:32px}.stats span{display:block;margin-top:.35rem;font-size:13px;line-height:1.3}.tabs{flex-wrap:wrap;justify-content:center;width:auto;border-radius:24px;overflow:visible}.tabs button{padding:.65rem 1rem}}
+@media print{nav,.ctl,.zm,dialog,.skip{display:none!important}.rv,.fu{opacity:1!important;animation:none!important}.band{background:none}section,.band{padding:1.5rem var(--pad)}#top{padding-top:1rem}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1}html{scroll-behavior:auto}}
 </style>
 <noscript><style>.rv,.av img,.pt img,.ph img,nav{opacity:1!important}.fu{animation:none}</style></noscript>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <nav id="nav">
   <a href="#top" class="nm">Abdelrahman Mostafa</a>
   <ul><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li></ul>
   <div class="np"><a class="pl o" href="Abdelrahman-Mostafa-CV.pdf">CV</a><a class="pl b" href="#contact">Contact</a></div>
 </nav>
 
-<header id="top">
-  <div class="av fu"><img src="assets/avatar.jpg" data-alt="assets/avatar.jpeg,assets/avatar.png,assets/avatar.webp,assets/profile.jpg,assets/profile.jpeg,assets/profile.png" alt="Abdelrahman Mostafa" width="128" height="128" fetchpriority="high" decoding="async" onload="this.classList.add('ok')" onerror="fb(this)"></div>
+<main id="main">
+<section id="top">
+  <div class="av fu"><img src="assets/avatar.webp" alt="Abdelrahman Mostafa" width="128" height="128" fetchpriority="high" decoding="async" onload="this.classList.add('ok')" onerror="fb(this)"></div>
   <p class="st fu" style="--i:1">Open to full-time &amp; freelance</p>
   <p class="kk fu" style="--i:2">Abdelrahman Mostafa</p>
   <h1 class="fu" style="--i:3">AI that stays grounded in evidence.</h1>
   <p class="sub fu" style="--i:4">AI Engineer building LLM and RAG systems that show their sources. I lead teams that ship.</p>
   <div class="cta fu" style="--i:5"><a class="pl b lg" href="#projects">View my work</a><a class="ln" href="Abdelrahman-Mostafa-CV.pdf">Download CV</a></div>
-  <div class="ph fu" style="--i:6"><img class="p1" src="assets/tourmate/chat.webp" data-alt="assets/tm-chat.webp" alt="TourMate AI chat screen" onload="this.classList.add('ok')" onerror="fb(this)"><img class="p2" src="assets/tourmate/itinerary.webp" data-alt="assets/tm-itinerary.webp,assets/tm-plan.webp" alt="TourMate AI itinerary screen" onload="this.classList.add('ok')" onerror="fb(this)"><img class="p3" src="assets/tourmate/flights.webp" data-alt="assets/tm-flights.webp" alt="TourMate AI flights screen" onload="this.classList.add('ok')" onerror="fb(this)"></div>
-</header>
+  <div class="ph fu" style="--i:6"><img class="p1" src="assets/tourmate/chat.webp" alt="TourMate AI chat screen" width="600" height="1268" decoding="async" onload="this.classList.add('ok')" onerror="fb(this)"><img class="p2" src="assets/tourmate/itinerary.webp" alt="TourMate AI itinerary screen" width="600" height="1268" decoding="async" onload="this.classList.add('ok')" onerror="fb(this)"><img class="p3" src="assets/tourmate/flights.webp" alt="TourMate AI flights screen" width="600" height="1268" decoding="async" onload="this.classList.add('ok')" onerror="fb(this)"></div>
+</section>
 
 <section id="about" class="band">
   <div class="w ab">
@@ -214,7 +245,7 @@ h1,h2{text-wrap:balance}
         <div><strong data-n="2">2</strong><span>Teams led</span></div>
       </div>
     </div>
-    <div class="pt rv" style="--i:2"><img src="assets/profile.jpg" data-alt="assets/profile.jpeg,assets/profile.png,assets/profile.webp,assets/Profile.jpg,assets/Profile.jpeg,assets/profile.JPG" alt="Portrait of Abdelrahman Mostafa" loading="lazy" onload="this.classList.add('ok')" onerror="fb(this)"></div>
+    <div class="pt rv" style="--i:2"><img src="assets/profile.webp" alt="Abdelrahman Mostafa at his Cairo University graduation" width="1080" height="1427" loading="lazy" decoding="async" onload="this.classList.add('ok')" onerror="fb(this)"></div>
   </div>
 </section>
 
@@ -285,12 +316,13 @@ h1,h2{text-wrap:balance}
       <p class="vc" aria-live="polite"></p>
       <div class="vp"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
         <div class="vs">
-          <img src="assets/healthcare/symptoms.webp" alt="Healthcare RAG Assistant: answer on type 2 diabetes symptoms with numbered citations and five sources" width="1005" height="1546" loading="lazy" onerror="this.remove()">
-          <img src="assets/healthcare/metformin.webp" alt="Healthcare RAG Assistant: a short cited answer about metformin and prediabetes" width="1005" height="870" loading="lazy" onerror="this.remove()">
-          <img src="assets/healthcare/safety.webp" alt="Healthcare RAG Assistant: emergency safety response to chest pain" width="1005" height="961" loading="lazy" onerror="this.remove()">
-          <img src="assets/healthcare/abstain.webp" alt="Healthcare RAG Assistant: declining an out-of-scope question" width="1005" height="805" loading="lazy" onerror="this.remove()">
+          <img src="assets/healthcare/symptoms.webp" alt="Healthcare RAG Assistant: answer on type 2 diabetes symptoms with numbered citations and five sources" width="1159" height="1858" loading="lazy" onerror="this.remove()">
+          <img src="assets/healthcare/metformin.webp" alt="Healthcare RAG Assistant: a short cited answer about metformin and prediabetes" width="1159" height="1019" loading="lazy" onerror="this.remove()">
+          <img src="assets/healthcare/safety.webp" alt="Healthcare RAG Assistant: emergency safety response to chest pain" width="1159" height="1142" loading="lazy" onerror="this.remove()">
+          <img src="assets/healthcare/abstain.webp" alt="Healthcare RAG Assistant: declining an out-of-scope question" width="1159" height="928" loading="lazy" onerror="this.remove()">
         </div>
       </div>
+      <div class="zm"><button class="pl o" id="zm" type="button">View full size</button></div>
     </div>
     <h3 class="fh rv">How a question becomes an answer.</h3>
     <div class="dg rv" aria-label="How a question flows through the assistant">
@@ -323,10 +355,10 @@ h1,h2{text-wrap:balance}
       <p class="rv" style="--i:1;margin:0">Data cleaning, feature engineering, cross-validation and SMOTE, with every model scored on metrics that fit its task.</p>
     </div>
     <div class="g4">
-      <a class="cd rv" href="https://github.com/AbdelrahmanMostafa33/Student-Score-Prediction" target="_blank" rel="noopener"><em>Regression · R², RMSE and MAE with cross-validation</em><b>Student Score Prediction</b><span class="ln">GitHub</span></a>
-      <a class="cd rv" style="--i:1" href="https://github.com/AbdelrahmanMostafa33/Customer-Segmentation" target="_blank" rel="noopener"><em>Clustering · k chosen with Elbow and Silhouette</em><b>Customer Segmentation</b><span class="ln">GitHub</span></a>
-      <a class="cd rv" style="--i:2" href="https://github.com/AbdelrahmanMostafa33/Loan-Approval-Prediction-Description" target="_blank" rel="noopener"><em>Classification · SMOTE for an 86/14 imbalance, scored on ROC-AUC and minority-class F1</em><b>Loan Approval Prediction</b><span class="ln">GitHub</span></a>
-      <a class="cd rv" style="--i:3" href="https://github.com/AbdelrahmanMostafa33/Forest-Cover-Type-Classification" target="_blank" rel="noopener"><em>Classification · 97.1% accuracy with XGBoost</em><b>Forest Cover Type</b><span class="ln">GitHub</span></a>
+      <a class="cd rv" href="https://github.com/AbdelrahmanMostafa33/Student-Score-Prediction" target="_blank" rel="noopener"><b>Student Score Prediction</b><em>Regression · R², RMSE and MAE with cross-validation</em><span class="ln">GitHub</span></a>
+      <a class="cd rv" style="--i:1" href="https://github.com/AbdelrahmanMostafa33/Customer-Segmentation" target="_blank" rel="noopener"><b>Customer Segmentation</b><em>Clustering · k chosen with Elbow and Silhouette</em><span class="ln">GitHub</span></a>
+      <a class="cd rv" style="--i:2" href="https://github.com/AbdelrahmanMostafa33/Loan-Approval-Prediction-Description" target="_blank" rel="noopener"><b>Loan Approval Prediction</b><em>Classification · SMOTE for an 86/14 imbalance, scored on ROC-AUC and minority-class F1</em><span class="ln">GitHub</span></a>
+      <a class="cd rv" style="--i:3" href="https://github.com/AbdelrahmanMostafa33/Forest-Cover-Type-Classification" target="_blank" rel="noopener"><b>Forest Cover Type</b><em>Classification · 97.1% accuracy with XGBoost</em><span class="ln">GitHub</span></a>
     </div>
   </div>
 </section>
@@ -344,14 +376,14 @@ h1,h2{text-wrap:balance}
 <section id="skills" class="band">
   <div class="w">
     <h2 class="rv h2c" style="margin-bottom:2.5rem">Skills.</h2>
-    <div class="row rv"><h3>Generative AI &amp; LLMs</h3><p>RAG · LangGraph · LangChain · Prompt engineering · FAISS · Cross-encoder reranking · Citation validation · Gemini · Groq / Cerebras</p></div>
-    <div class="row rv"><h3>Machine Learning</h3><p>scikit-learn · XGBoost · Pandas · NumPy · Feature engineering · Cross-validation · SMOTE</p></div>
-    <div class="row rv"><h3>Backend &amp; DevOps</h3><p>FastAPI · PostgreSQL · Redis · Docker · GitHub Actions · MLflow</p></div>
-    <div class="row rv"><h3>Languages</h3><p>Arabic (native) · English (professional)</p></div>
+    <div class="row rv"><h3>Generative AI &amp; LLMs</h3><div class="chips"><span>RAG</span><span>LangGraph</span><span>LangChain</span><span>Prompt engineering</span><span>FAISS</span><span>Cross-encoder reranking</span><span>Citation validation</span><span>Gemini</span><span>Groq / Cerebras</span></div></div>
+    <div class="row rv"><h3>Machine Learning</h3><div class="chips"><span>scikit-learn</span><span>XGBoost</span><span>Pandas</span><span>NumPy</span><span>Feature engineering</span><span>Cross-validation</span><span>SMOTE</span></div></div>
+    <div class="row rv"><h3>Backend &amp; DevOps</h3><div class="chips"><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span><span>GitHub Actions</span><span>MLflow</span></div></div>
+    <div class="row rv"><h3>Languages</h3><div class="chips"><span>Arabic (native)</span><span>English (professional)</span></div></div>
   </div>
 </section>
 
-<section>
+<section id="education" aria-label="Education, certifications and competitive programming">
   <div class="w g3">
     <div class="rv"><h3>Education</h3><p>Cairo University<br>B.Sc. in Computers &amp; Artificial Intelligence<br>GPA 3.53 / 4.00 · Graduated Jul 2026</p></div>
     <div class="rv" style="--i:1"><h3>Certifications</h3>
@@ -373,9 +405,12 @@ h1,h2{text-wrap:balance}
   <div class="so rv"><a class="ln" href="tel:+201125016702">+20 112 501 6702</a><a class="ln" href="https://github.com/AbdelrahmanMostafa33" target="_blank" rel="noopener">GitHub</a><a class="ln" href="https://www.linkedin.com/in/abdelrahman-mostafa33/" target="_blank" rel="noopener">LinkedIn</a></div>
 </section>
 
+</main>
+
 <footer><span>© 2026 Abdelrahman Mostafa</span><span>AI Engineer · Giza, Egypt</span></footer>
 
-<dialog id="dlg"><button class="x" id="dx" aria-label="Close video">✕</button><iframe id="fr" title="TourMate AI demo" allow="autoplay;fullscreen" allowfullscreen></iframe></dialog>
+<dialog id="dlg" aria-label="Project demo video"><button class="x" id="dx" aria-label="Close video">✕</button><iframe id="fr" title="TourMate AI demo" allow="autoplay;fullscreen"></iframe></dialog>
+<dialog id="lb" class="lb" aria-label="Screenshot, full size"><button class="x" id="lx" aria-label="Close screenshot">✕</button><div class="lbs"><img id="li" alt=""></div></dialog>
 
 <script>
 const $=s=>[...document.querySelectorAll(s)];
@@ -387,18 +422,27 @@ $('.av img,.pt img,.ph img').forEach(i=>i.complete&&i.naturalWidth&&i.classList.
 const av=document.querySelector('.av img');
 const fonts=document.fonts?Promise.all(['400','600'].map(w=>document.fonts.load(w+' 1em Inter'))).catch(()=>{}):Promise.resolve();
 const pic=new Promise(r=>{if(!av||(av.complete&&av.naturalWidth))return r();av.addEventListener('load',r);av.addEventListener('error',()=>{if(!av.isConnected)r()})});
-Promise.race([Promise.all([fonts,pic]),new Promise(r=>setTimeout(r,2500))]).then(()=>{document.documentElement.classList.add('ready');setTimeout(()=>$('.rv').forEach(el=>io.observe(el)),1100)});
+Promise.race([Promise.all([fonts,pic]),new Promise(r=>setTimeout(r,1200))]).then(()=>{document.documentElement.classList.add('ready');setTimeout(()=>$('.rv').forEach(el=>io.observe(el)),1100)});
 const D='https://drive.google.com/file/d/16zuxxu9YC1H8s7IxNZ5Pye_xYIf_IUpX/';
-const S=[['Just say where.','Describe a trip in plain language.','chat'],['A day-by-day plan.','Itineraries shaped by your travel style.','itinerary'],['See it on the map.','Every stop, routed.','map'],['Real flights.','Search flights without leaving the chat.','flights'],['Pick a hotel.','Compare stays for your trip.','hotels'],['Pay in the chat.','Review the total, then pay. Stripe sandbox.','payment'],['Search naturally.','Describe what you want, or filter by city and type.','search'],['Your travel persona.','A profile built from your preferences.','persona']];
-car.innerHTML=S.map(([t,d,n,a])=>`<article class="sl"><div class="tx"><h3>${t}</h3><p>${d}</p></div><div class="im"><img src="assets/tourmate/${n}.webp?v=2"${a?` data-alt="${a.split(',').map(x=>x.includes('/')?x+'.webp':'assets/'+x+'.webp').join(',')}"`:''} alt="TourMate AI: ${t}" loading="lazy" onload="this.classList.add('ok')" onerror="fb(this)"></div></article>`).join('');
+const S=[['Just say where.','Describe a trip in plain language.','chat'],['Watch it plan.','Live progress as it loads your profile, finds places and builds the itinerary.','progress'],['A day-by-day plan.','Itineraries shaped by your travel style.','itinerary'],['See it on the map.','Every stop, routed.','map'],['Real flights.','Search flights without leaving the chat.','flights'],['Pick a hotel.','Compare stays for your trip.','hotels'],['Review the total.','Flight and hotel in one price breakdown, with Pay now or Book later.','summary'],['Pay in the chat.','Stripe sandbox checkout, right in the conversation.','payment'],['Every trip, tracked.','Planning, draft and confirmed trips in one list.','trips'],['Search naturally.','Describe what you want, or filter by city and type.','search'],['Your travel persona.','A profile built from your preferences.','persona']];
+car.innerHTML=S.map(([t,d,n])=>`<article class="sl"><div class="tx"><h3>${t}</h3><p>${d}</p></div><div class="im"><img src="assets/tourmate/${n}.webp" alt="TourMate AI: ${t}" width="600" height="1268" loading="lazy" decoding="async" onload="this.classList.add('ok')" onerror="fb(this)"></div></article>`).join('');
 (()=>{const vw=document.querySelector('.vw');if(!vw)return;const tabs=[...vw.querySelectorAll('[role=tab]')],cap=vw.querySelector('.vc');
 let cur=0;const vs=vw.querySelector('.vs'),fit=()=>{const m=vs.querySelectorAll('img')[cur];if(m){vs.style.aspectRatio='auto';vs.style.height=vs.clientWidth*m.getAttribute('height')/m.getAttribute('width')+'px'}};addEventListener('resize',fit);
-const show=i=>{const imgs=[...vw.querySelectorAll('.vs img')];tabs.forEach((t,k)=>{t.setAttribute('aria-selected',k==i);t.tabIndex=k==i?0:-1});imgs.forEach((m,k)=>m.classList.toggle('act',k==i));cap.textContent=tabs[i].dataset.cap;cur=i;fit()};
+vs.id='vs';vs.setAttribute('role','tabpanel');tabs.forEach((t,k)=>{t.id='tab'+k;t.setAttribute('aria-controls','vs')});
+const show=i=>{const imgs=[...vw.querySelectorAll('.vs img')];tabs.forEach((t,k)=>{t.setAttribute('aria-selected',k==i);t.tabIndex=k==i?0:-1});imgs.forEach((m,k)=>{m.classList.toggle('act',k==i);m.setAttribute('aria-hidden',k!=i)});vs.setAttribute('aria-labelledby','tab'+i);cap.textContent=tabs[i].dataset.cap;cur=i;fit()};
 tabs.forEach((t,i)=>t.addEventListener('click',()=>show(i)));
 vw.querySelector('.tabs').addEventListener('keydown',e=>{const k=tabs.indexOf(document.activeElement);if(k<0||!['ArrowLeft','ArrowRight'].includes(e.key))return;const n=(k+(e.key=='ArrowRight'?1:tabs.length-1))%tabs.length;show(n);tabs[n].focus()});
-show(0)})();
+show(0);
+const zoom=()=>{const m=vs.querySelectorAll('img')[cur];if(!m)return;li.src=m.currentSrc||m.src;li.alt=m.alt;lb.showModal();lb.querySelector('.lbs').scrollTop=0};
+zm.onclick=zoom;vw.querySelector('.vp').addEventListener('click',zoom);
+lx.onclick=()=>lb.close();lb.onclick=e=>{if(e.target===lb)lb.close()}})();
 const go=d=>{const w=car.firstElementChild.offsetWidth+20;car.scrollBy({left:d*w*Math.max(1,Math.floor(car.clientWidth/w)-1),behavior:'smooth'})};
 pv.onclick=()=>go(-1);nx.onclick=()=>go(1);
+const upd=()=>{pv.disabled=car.scrollLeft<4;nx.disabled=car.scrollLeft+car.clientWidth>=car.scrollWidth-4};car.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();
+/* Nav highlight: mark the section that crosses the middle of the screen */
+const links=$('nav ul a'),grp={tourmate:'projects',healthcare:'projects',ml:'projects'};
+const spy=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const id=grp[e.target.id]||e.target.id;links.forEach(a=>a.setAttribute('aria-current',a.hash==='#'+id))}),{rootMargin:'-45% 0px -50% 0px'});
+['top','about','projects','tourmate','healthcare','ml','experience','skills','education','contact'].forEach(id=>{const el=document.getElementById(id);el&&spy.observe(el)});
 document.addEventListener('click',e=>{const b=e.target.closest('[data-demo]');if(!b)return;e.preventDefault();fr.src=(b.dataset.demo||D)+'preview';fr.title=b.dataset.title||'TourMate AI demo';dlg.showModal()});
 dx.onclick=()=>dlg.close();dlg.onclick=e=>{if(e.target===dlg)dlg.close()};dlg.onclose=()=>{fr.src='about:blank'};
 </script>
