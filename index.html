@@ -38,7 +38,7 @@ html{scroll-behavior:smooth;scroll-padding-top:60px}
 body{background:var(--w);color:var(--ink);font:400 17px/1.47 var(--f);letter-spacing:-.022em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%}
 a{color:inherit;text-decoration:none}
-a:focus-visible,button:focus-visible,.car:focus-visible{outline:2px solid var(--cta);outline-offset:3px;border-radius:6px}
+a:focus-visible,button:focus-visible,.car:focus-visible,img[data-z]:focus-visible{outline:2px solid var(--cta);outline-offset:3px;border-radius:6px}
 nav{position:fixed;inset:0 0 auto;z-index:50;height:44px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;padding:0 max(var(--pad),calc((100% - 1080px)/2));background:rgba(255,255,255,.82);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-bottom:1px solid transparent;transition:border-color .3s,opacity .6s}
 nav.s{border-color:var(--hair)}
 html:not(.ready) nav{opacity:0}
@@ -87,6 +87,7 @@ h3{font:600 28px/1.14 var(--f);letter-spacing:0}
 .ci .kk{font:600 21px/1.2 var(--f);letter-spacing:.011em;color:var(--ink);margin-bottom:.9rem}
 .mt{font-size:12px;line-height:16px;color:var(--slate);margin-bottom:.8rem}
 .car{--e:var(--pad);--cw:clamp(250px,19vw,340px);display:grid;grid-auto-flow:column;grid-auto-columns:var(--cw);grid-template-rows:auto 1fr;column-gap:20px;row-gap:0;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 var(--e);scrollbar-width:none;margin:0 calc(var(--pad)*-1);padding:0 var(--e)}
+.car{padding-bottom:28px;margin-bottom:-28px}
 .car::-webkit-scrollbar{display:none}
 .sl{display:grid;grid-row:span 2;grid-template-rows:subgrid;background:var(--w);border-radius:28px;overflow:hidden;scroll-snap-align:start}
 .sl .tx{padding:28px 28px 0}
@@ -209,6 +210,9 @@ nav ul a[aria-current=true]{text-decoration:underline;text-underline-offset:6px;
 dialog.lb{aspect-ratio:auto;background:#fff;width:min(1060px,94vw)}
 .lbs{overflow:auto;max-height:92vh;overscroll-behavior:contain}
 .lbs img{display:block;width:100%;min-width:760px;height:auto}
+img[data-z]{cursor:pointer;-webkit-tap-highlight-color:transparent}
+dialog.lb.mob{width:min(600px,94vw)}
+.lb.mob .lbs img{min-width:0}
 @media(max-width:520px){.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.stats strong{font-size:32px}.stats span{display:block;margin-top:.35rem;font-size:13px;line-height:1.3}.tabs{flex-wrap:wrap;justify-content:center;width:auto;border-radius:24px;overflow:visible}.tabs button{padding:.65rem 1rem}}
 @media print{nav,.ctl,.zm,dialog,.skip{display:none!important}.rv,.fu{opacity:1!important;animation:none!important}.band{background:none}section,.band{padding:1.5rem var(--pad)}#top{padding-top:1rem}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1}html{scroll-behavior:auto}}
@@ -231,7 +235,7 @@ dialog.lb{aspect-ratio:auto;background:#fff;width:min(1060px,94vw)}
   <h1 class="fu" style="--i:3">AI that stays grounded in evidence.</h1>
   <p class="sub fu" style="--i:4">AI Engineer building LLM and RAG systems that show their sources. I lead teams that ship.</p>
   <div class="cta fu" style="--i:5"><a class="pl b lg" href="#projects">View my work</a><a class="ln" href="Abdelrahman-Mostafa-CV.pdf">Download CV</a></div>
-  <div class="ph fu" style="--i:6"><img class="p1" src="assets/tourmate/chat.webp" alt="TourMate AI chat screen" width="600" height="1268" decoding="async" onload="this.classList.add('ok')" onerror="fb(this)"><img class="p2" src="assets/tourmate/itinerary.webp" alt="TourMate AI itinerary screen" width="600" height="1268" decoding="async" onload="this.classList.add('ok')" onerror="fb(this)"><img class="p3" src="assets/tourmate/flights.webp" alt="TourMate AI flights screen" width="600" height="1268" decoding="async" onload="this.classList.add('ok')" onerror="fb(this)"></div>
+  <div class="ph fu" style="--i:6"><img class="p1" src="assets/tourmate/chat.webp" alt="TourMate AI chat screen" width="600" height="1268" decoding="async" data-z tabindex="0" role="button" aria-label="Enlarge TourMate AI chat screen" onload="this.classList.add('ok')" onerror="fb(this)"><img class="p2" src="assets/tourmate/itinerary.webp" alt="TourMate AI itinerary screen" width="600" height="1268" decoding="async" data-z tabindex="0" role="button" aria-label="Enlarge TourMate AI itinerary screen" onload="this.classList.add('ok')" onerror="fb(this)"><img class="p3" src="assets/tourmate/flights.webp" alt="TourMate AI flights screen" width="600" height="1268" decoding="async" data-z tabindex="0" role="button" aria-label="Enlarge TourMate AI flights screen" onload="this.classList.add('ok')" onerror="fb(this)"></div>
 </section>
 
 <section id="about" class="band">
@@ -416,7 +420,7 @@ dialog.lb{aspect-ratio:auto;background:#fff;width:min(1060px,94vw)}
 const $=s=>[...document.querySelectorAll(s)];
 addEventListener('scroll',()=>nav.classList.toggle('s',scrollY>8),{passive:true});
 function count(el){if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;const to=+el.dataset.n,f=+el.dataset.f||0,s=el.dataset.s||'';let t0;const st=t=>{t0??=t;const p=Math.min((t-t0)/1400,1);el.textContent=(to*(1-Math.pow(1-p,3))).toFixed(f)+s;p<1&&requestAnimationFrame(st)};requestAnimationFrame(st)}
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('on');e.target.querySelectorAll('[data-n]').forEach(count);io.unobserve(e.target)}),{threshold:.12});
+const io=new IntersectionObserver(es=>{let k=0;es.forEach(e=>{if(!e.isIntersecting)return;if(e.target.matches('.sl'))e.target.style.setProperty('--i',k++);e.target.classList.add('on');e.target.querySelectorAll('[data-n]').forEach(count);io.unobserve(e.target)})},{threshold:.12});
 $('.av img,.pt img,.ph img').forEach(i=>i.complete&&i.naturalWidth&&i.classList.add('ok'));
 /* Load sequence: wait for the fonts and the avatar, then play the hero top to bottom, then reveal the rest on scroll */
 const av=document.querySelector('.av img');
@@ -425,7 +429,7 @@ const pic=new Promise(r=>{if(!av||(av.complete&&av.naturalWidth))return r();av.a
 Promise.race([Promise.all([fonts,pic]),new Promise(r=>setTimeout(r,1200))]).then(()=>{document.documentElement.classList.add('ready');setTimeout(()=>$('.rv').forEach(el=>io.observe(el)),1100)});
 const D='https://drive.google.com/file/d/16zuxxu9YC1H8s7IxNZ5Pye_xYIf_IUpX/';
 const S=[['Just say where.','Describe a trip in plain language.','chat'],['Watch it plan.','Live progress as it loads your profile, finds places and builds the itinerary.','progress'],['A day-by-day plan.','Itineraries shaped by your travel style.','itinerary'],['See it on the map.','Every stop, routed.','map'],['Real flights.','Search flights without leaving the chat.','flights'],['Pick a hotel.','Compare stays for your trip.','hotels'],['Review the total.','Flight and hotel in one price breakdown, with Pay now or Book later.','summary'],['Pay in the chat.','Stripe sandbox checkout, right in the conversation.','payment'],['Every trip, tracked.','Planning, draft and confirmed trips in one list.','trips'],['Search naturally.','Describe what you want, or filter by city and type.','search'],['Your travel persona.','A profile built from your preferences.','persona']];
-car.innerHTML=S.map(([t,d,n])=>`<article class="sl"><div class="tx"><h3>${t}</h3><p>${d}</p></div><div class="im"><img src="assets/tourmate/${n}.webp" alt="TourMate AI: ${t}" width="600" height="1268" loading="lazy" decoding="async" onload="this.classList.add('ok')" onerror="fb(this)"></div></article>`).join('');
+car.innerHTML=S.map(([t,d,n])=>`<article class="sl rv"><div class="tx"><h3>${t}</h3><p>${d}</p></div><div class="im"><img src="assets/tourmate/${n}.webp" alt="TourMate AI: ${t}" width="600" height="1268" loading="lazy" decoding="async" data-z tabindex="0" role="button" aria-label="Enlarge screen: ${t}" onload="this.classList.add('ok')" onerror="fb(this)"></div></article>`).join('');
 (()=>{const vw=document.querySelector('.vw');if(!vw)return;const tabs=[...vw.querySelectorAll('[role=tab]')],cap=vw.querySelector('.vc');
 let cur=0;const vs=vw.querySelector('.vs'),fit=()=>{const m=vs.querySelectorAll('img')[cur];if(m){vs.style.aspectRatio='auto';vs.style.height=vs.clientWidth*m.getAttribute('height')/m.getAttribute('width')+'px'}};addEventListener('resize',fit);
 vs.id='vs';vs.setAttribute('role','tabpanel');tabs.forEach((t,k)=>{t.id='tab'+k;t.setAttribute('aria-controls','vs')});
@@ -436,6 +440,11 @@ show(0);
 const zoom=()=>{const m=vs.querySelectorAll('img')[cur];if(!m)return;li.src=m.currentSrc||m.src;li.alt=m.alt;lb.showModal();lb.querySelector('.lbs').scrollTop=0};
 zm.onclick=zoom;vw.querySelector('.vp').addEventListener('click',zoom);
 lx.onclick=()=>lb.close();lb.onclick=e=>{if(e.target===lb)lb.close()}})();
+/* TourMate screens: click (or Enter/Space) opens the same full-size viewer the Healthcare screens use */
+const zt=m=>{li.src=m.currentSrc||m.src;li.alt=m.alt;lb.classList.add('mob');lb.showModal();lb.querySelector('.lbs').scrollTop=0};
+document.addEventListener('click',e=>{const m=e.target.closest('img[data-z]');m&&zt(m)});
+document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('img[data-z]')){e.preventDefault();zt(e.target)}});
+lb.addEventListener('close',()=>lb.classList.remove('mob'));
 const go=d=>{const w=car.firstElementChild.offsetWidth+20;car.scrollBy({left:d*w*Math.max(1,Math.floor(car.clientWidth/w)-1),behavior:'smooth'})};
 pv.onclick=()=>go(-1);nx.onclick=()=>go(1);
 const upd=()=>{pv.disabled=car.scrollLeft<4;nx.disabled=car.scrollLeft+car.clientWidth>=car.scrollWidth-4};car.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();
