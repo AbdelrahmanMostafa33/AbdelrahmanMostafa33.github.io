@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Abdelrahman Mostafa — AI Engineer | LLM &amp; RAG Systems</title>
-<meta name="description" content="Abdelrahman Mostafa — AI Engineer building LLM and RAG systems. TourMate AI, Healthcare RAG Assistant and more.">
+<title>Abdelrahman Mostafa — AI Engineer | Generative AI &amp; LLM Applications</title>
+<meta name="description" content="Abdelrahman Mostafa — AI Engineer focused on Generative AI, LLM applications, retrieval systems and evaluation. TourMate AI and Healthcare RAG Assistant.">
 <meta name="theme-color" content="#ffffff">
 <meta name="author" content="Abdelrahman Mostafa">
 <link rel="canonical" href="https://abdelrahmanmostafa33.github.io/">
@@ -13,18 +13,18 @@
 <meta property="og:site_name" content="Abdelrahman Mostafa">
 <meta property="og:url" content="https://abdelrahmanmostafa33.github.io/">
 <meta property="og:title" content="Abdelrahman Mostafa — AI Engineer">
-<meta property="og:description" content="AI that stays grounded in evidence. RAG systems, agentic workflows and honest evaluation.">
+<meta property="og:description" content="Generative AI, LLM applications, retrieval systems and honest evaluation. TourMate AI and Healthcare RAG Assistant.">
 <meta property="og:image" content="https://abdelrahmanmostafa33.github.io/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Abdelrahman Mostafa, AI Engineer. AI that stays grounded in evidence.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Abdelrahman Mostafa — AI Engineer">
-<meta name="twitter:description" content="AI that stays grounded in evidence. RAG systems, agentic workflows and honest evaluation.">
+<meta name="twitter:description" content="Generative AI, LLM applications, retrieval systems and honest evaluation. TourMate AI and Healthcare RAG Assistant.">
 <meta name="twitter:image" content="https://abdelrahmanmostafa33.github.io/assets/og-image.jpg">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230071e3'/%3E%3Ctext x='32' y='42' font-size='28' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EAM%3C/text%3E%3C/svg%3E">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Abdelrahman Mostafa","url":"https://abdelrahmanmostafa33.github.io/","image":"https://abdelrahmanmostafa33.github.io/assets/profile.webp","jobTitle":"AI Engineer","address":{"@type":"PostalAddress","addressLocality":"Giza","addressCountry":"EG"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Cairo University"},"knowsAbout":["Retrieval-augmented generation","Large language models","LangGraph","Machine learning","FastAPI"],"sameAs":["https://github.com/AbdelrahmanMostafa33","https://www.linkedin.com/in/abdelrahman-mostafa33/"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Abdelrahman Mostafa","url":"https://abdelrahmanmostafa33.github.io/","image":"https://abdelrahmanmostafa33.github.io/assets/profile.webp","jobTitle":"AI Engineer","address":{"@type":"PostalAddress","addressLocality":"Giza","addressCountry":"EG"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Cairo University"},"knowsAbout":["Generative AI","Large language models","Retrieval-augmented generation","LangGraph","LLM evaluation","Machine learning","FastAPI"],"sameAs":["https://github.com/AbdelrahmanMostafa33","https://www.linkedin.com/in/abdelrahman-mostafa33/"]}</script>
 <script>
 /* If an image fails to load, remove it (or its whole slide) instead of leaving a broken icon. */
 setTimeout(function(){document.documentElement.classList.add('ready')},2500);
@@ -216,6 +216,48 @@ dialog.lb.mob{width:min(600px,94vw)}
 @media(max-width:520px){.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.stats strong{font-size:32px}.stats span{display:block;margin-top:.35rem;font-size:13px;line-height:1.3}.tabs{flex-wrap:wrap;justify-content:center;width:auto;border-radius:24px;overflow:visible}.tabs button{padding:.65rem 1rem}}
 @media print{nav,.ctl,.zm,dialog,.skip{display:none!important}.rv,.fu{opacity:1!important;animation:none!important}.band{background:none}section,.band{padding:1.5rem var(--pad)}#top{padding-top:1rem}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1}html{scroll-behavior:auto}}
+
+/* --- final spacing and experience credential polish --- */
+#skills{padding-bottom:clamp(2rem,4vw,3rem)}
+#education{padding-top:clamp(2rem,4vw,3rem)}
+.experience-links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
+.experience-links a{display:inline-flex;align-items:center;gap:.3rem;padding:.36rem .72rem;border:1px solid var(--hair);border-radius:999px;color:var(--link);font-size:12px;line-height:1.3;transition:background .2s,border-color .2s}
+.experience-links a:hover{background:var(--mist);border-color:#b8c8dc}
+/* --- skills and credentials refresh --- */
+.skill-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:2.2rem}
+.skill-card{min-width:0;background:#fff;border:1px solid rgba(0,0,0,.045);border-radius:24px;padding:clamp(1.25rem,3vw,2rem)}
+.skill-kicker{font:600 11px/1.2 var(--f);letter-spacing:.09em;color:var(--steel);margin-bottom:.8rem}
+.skill-card h3,.credential-card h3{font-size:22px;line-height:1.2;margin-bottom:1rem}
+.skill-card .chips{gap:.55rem}
+.skill-card .chips span{background:var(--mist);box-shadow:none;font-size:13px;padding:.34rem .75rem}
+.skill-meta{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px;padding:20px 24px;background:rgba(255,255,255,.72);border:1px solid rgba(0,0,0,.045);border-radius:20px}
+.skill-meta>div{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.meta-label{font-size:13px;font-weight:600;color:var(--slate);white-space:nowrap}
+.skill-meta .chips{gap:.45rem}
+.skill-meta .chips span{font-size:13px;padding:.3rem .7rem;background:#fff;box-shadow:0 0 0 1px var(--hair)}
+.credential-top{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.credential-card{background:#fff;border:1px solid rgba(0,0,0,.045);border-radius:24px;padding:clamp(1.3rem,3vw,2rem);min-width:0}
+.credential-card h3{margin-bottom:.45rem}
+.credential-card .degree,.card-note{font-size:15px;line-height:1.45;color:var(--slate)}
+.edu-facts{display:flex;align-items:baseline;gap:.55rem;margin-top:1.5rem}
+.edu-facts strong{font:600 30px/1 var(--f);letter-spacing:-.02em}
+.edu-facts span,.card-note{color:var(--slate);font-size:13px}
+.card-note{margin-top:.4rem}
+.award-line{display:flex;align-items:baseline;gap:.75rem;margin-top:.8rem;flex-wrap:wrap}
+.award-line strong{font-size:16px;font-weight:600}
+.award-line span{font-size:14px;color:var(--slate)}
+.profile-links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem}
+.profile-links a{font-size:13px;color:var(--link);padding:.32rem .7rem;border:1px solid var(--hair);border-radius:999px;transition:background .2s}
+.profile-links a:hover{background:var(--mist)}
+.credential-heading{font-size:21px;margin:2.5rem 0 1rem}
+.cert-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.cert-card{display:flex;flex-direction:column;align-items:flex-start;gap:.6rem;min-height:156px;padding:22px;background:#fff;border:1px solid rgba(0,0,0,.055);border-radius:20px;transition:transform .2s,background .2s,border-color .2s}
+.cert-card:hover{transform:translateY(-2px);background:#fff;border-color:#b8c8dc}
+.cert-provider{font-size:12px;line-height:1.35;color:var(--slate)}
+.cert-card strong{font-size:16px;line-height:1.3;font-weight:600}
+.cert-link{margin-top:auto;padding-top:.3rem;font-size:13px;color:var(--link)}
+@media(max-width:860px){.skill-grid{grid-template-columns:1fr 1fr}.credential-top{grid-template-columns:1fr 1fr}.cert-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.skill-grid,.skill-meta,.credential-top,.cert-grid{grid-template-columns:1fr}.skill-meta>div{align-items:flex-start;flex-direction:column;gap:.55rem}.cert-card{min-height:130px}}
 </style>
 <noscript><style>.rv,.av img,.pt img,.ph img,nav{opacity:1!important}.fu{animation:none}</style></noscript>
 </head>
@@ -223,8 +265,8 @@ dialog.lb.mob{width:min(600px,94vw)}
 <a class="skip" href="#main">Skip to content</a>
 <nav id="nav">
   <a href="#top" class="nm">Abdelrahman Mostafa</a>
-  <ul><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li></ul>
-  <div class="np"><a class="pl o" href="Abdelrahman-Mostafa-CV.pdf">CV</a><a class="pl b" href="#contact">Contact</a></div>
+  <ul><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li><li><a href="#education">Credentials</a></li></ul>
+  <div class="np"><a class="pl o" href="./Abdelrahman-Mostafa-CV.pdf" download="Abdelrahman-Mostafa-CV.pdf" type="application/pdf" aria-label="Download CV">CV</a><a class="pl b" href="#contact">Contact</a></div>
 </nav>
 
 <main id="main">
@@ -233,8 +275,8 @@ dialog.lb.mob{width:min(600px,94vw)}
   <p class="st fu" style="--i:1">Open to full-time &amp; freelance</p>
   <p class="kk fu" style="--i:2">Abdelrahman Mostafa</p>
   <h1 class="fu" style="--i:3">AI that stays grounded in evidence.</h1>
-  <p class="sub fu" style="--i:4">AI Engineer building LLM and RAG systems that show their sources. I lead teams that ship.</p>
-  <div class="cta fu" style="--i:5"><a class="pl b lg" href="#projects">View my work</a><a class="ln" href="Abdelrahman-Mostafa-CV.pdf">Download CV</a></div>
+  <p class="sub fu" style="--i:4">AI Engineer focused on Generative AI, LLM applications, retrieval systems and evaluation. Project work spans evidence-grounded Q&amp;A, LangGraph workflows and end-to-end machine learning.</p>
+  <div class="cta fu" style="--i:5"><a class="pl b lg" href="#projects">View my work</a><a class="ln" href="./Abdelrahman-Mostafa-CV.pdf" download="Abdelrahman-Mostafa-CV.pdf" type="application/pdf">Download CV</a></div>
   <div class="ph fu" style="--i:6"><img class="p1" src="assets/tourmate/chat.webp" alt="TourMate AI chat screen" width="600" height="1268" decoding="async" data-z tabindex="0" role="button" aria-label="Enlarge TourMate AI chat screen" onload="this.classList.add('ok')" onerror="fb(this)"><img class="p2" src="assets/tourmate/itinerary.webp" alt="TourMate AI itinerary screen" width="600" height="1268" decoding="async" data-z tabindex="0" role="button" aria-label="Enlarge TourMate AI itinerary screen" onload="this.classList.add('ok')" onerror="fb(this)"><img class="p3" src="assets/tourmate/flights.webp" alt="TourMate AI flights screen" width="600" height="1268" decoding="async" data-z tabindex="0" role="button" aria-label="Enlarge TourMate AI flights screen" onload="this.classList.add('ok')" onerror="fb(this)"></div>
 </section>
 
@@ -242,7 +284,7 @@ dialog.lb.mob{width:min(600px,94vw)}
   <div class="w ab">
     <div>
       <h2 class="rv">About.</h2>
-      <p class="rv" style="--i:1">I’m an AI Engineer working on RAG applications, agentic workflows and end-to-end machine learning. I’ve led graduation teams at Cairo University and DEPI, and I care about evaluation that is honest about what a system can and can’t do.</p>
+      <p class="rv" style="--i:1">My work focuses on Generative AI, LLM applications, retrieval systems and end-to-end machine learning. I’ve led teams at Cairo University and DEPI to build a LangGraph travel planner and an evidence-grounded healthcare Q&amp;A assistant. I care about rigorous evaluation and systems that communicate when evidence is insufficient.</p>
       <div class="stats rv" style="--i:2">
         <div><strong data-n="3.53" data-f="2">3.53</strong><span>GPA out of 4.00</span></div>
         <div><strong data-n="550" data-s="+">550+</strong><span>Programming problems solved</span></div>
@@ -265,7 +307,7 @@ dialog.lb.mob{width:min(600px,94vw)}
   <div class="ci">
     <div class="pj-head rv"><span class="lt"><img src="assets/tourmate/logo-tourmate.webp" alt="" width="46" height="46" onerror="this.closest('.lt').remove()"></span><span class="pn">TourMate AI</span><span class="pm">Graduation project · Cairo University · Team of six</span></div>
     <h2 class="rv" style="--i:1">Plan the whole trip in one conversation.</h2>
-    <p class="rv" style="--i:2">Describe a trip in chat and TourMate builds the itinerary, finds flights and hotels, and takes payment. I led the team of six that built it.</p>
+    <p class="rv" style="--i:2">Describe a trip in chat and TourMate generates a multi-day itinerary, then supports flight and hotel selection. I led the six-person team that built it.</p>
     <div class="cta rv" style="--i:3"><a class="pl b lg" data-demo href="https://drive.google.com/file/d/16zuxxu9YC1H8s7IxNZ5Pye_xYIf_IUpX/view?usp=sharing" target="_blank" rel="noopener">Watch the demo</a><a class="ln" href="https://github.com/AbdelrahmanMostafa33/TourMate-AI" target="_blank" rel="noopener">GitHub</a></div>
   </div>
 <div>
@@ -295,8 +337,8 @@ dialog.lb.mob{width:min(600px,94vw)}
     </div>
   </div>
   <div class="w sp">
-    <div class="rv"><b>6-stage pipeline</b><span>A LangGraph workflow: profile, retrieve, score, plan, route, validate. I co-built it.</span></div>
-    <div class="rv" style="--i:1"><b>Two LLMs, one fallback</b><span>Gemini 2.5 Flash, with Groq Llama 3.3 70B as the fallback.</span></div>
+    <div class="rv"><b>6-node LangGraph pipeline</b><span>Profile loading, place retrieval, candidate ranking, itinerary planning, route optimization and validation. I co-built it.</span></div>
+    <div class="rv" style="--i:1"><b>LLM provider fallback</b><span>Gemini 2.5 Flash and Groq Llama 3.3 70B, with key rotation and rate-limit retries.</span></div>
     <div class="rv" style="--i:2"><b>Real APIs, full stack</b><span>Amadeus flights, OSRM routing and Stripe sandbox payments, on FastAPI, PostgreSQL, Redis and Flutter.</span></div>
   </div>
 </div>
@@ -347,7 +389,7 @@ dialog.lb.mob{width:min(600px,94vw)}
       <div class="rv" style="--i:2"><b class="n" data-n="100" data-s="%">100%</b><span>Valid citation IDs. All 48 answers cite only passages that were supplied.</span></div>
       <div class="rv" style="--i:3"><b class="n">5 of 8</b><span>Policy-scope abstention. The weakest spot, and the one I’d fix first.</span></div>
     </div>
-    <p class="fine">Evaluated on 87 questions with an LLM judge (gpt-oss-120b, rubric outcomes-v4), so treat the figures as estimates, not verified accuracy. Educational project; not a medical device and not clinically validated.</p>
+    <p class="fine">Evaluated on a 255-question labeled dataset, with an 87-question test subset. The assistant matched expected answer/abstention behavior on 79 of 87 test questions (90.8%). Breakdown metrics above use an LLM judge (gpt-oss-120b, rubric outcomes-v4), so treat them as exploratory estimates, not verified accuracy. Labels were not clinician-reviewed. Educational project; not a medical device and not clinically validated.</p>
   </div>
 </section>
 
@@ -356,7 +398,7 @@ dialog.lb.mob{width:min(600px,94vw)}
     <div class="ci" style="margin-bottom:2.5rem">
       <div class="pj-head rv"><span class="lt">ML</span><span class="pn">Machine learning projects</span><span class="pm">Elevvo Pathways internship</span></div>
       <h2 class="rv" style="--i:1">Four end-to-end ML projects.</h2>
-      <p class="rv" style="--i:1;margin:0">Data cleaning, feature engineering, cross-validation and SMOTE, with every model scored on metrics that fit its task.</p>
+      <p class="rv" style="--i:1;margin:0">Data cleaning, feature engineering and cross-validation, with SMOTE where appropriate and task-specific evaluation metrics.</p>
     </div>
     <div class="g4">
       <a class="cd rv" href="https://github.com/AbdelrahmanMostafa33/Student-Score-Prediction" target="_blank" rel="noopener"><b>Student Score Prediction</b><em>Regression · R², RMSE and MAE with cross-validation</em><span class="ln">GitHub</span></a>
@@ -370,35 +412,87 @@ dialog.lb.mob{width:min(600px,94vw)}
 <section id="experience">
   <div class="w">
     <h2 class="rv h2c" style="margin-bottom:2.5rem">Experience.</h2>
-    <div class="row rv"><div><div class="mt">Nov 2025 – Jul 2026</div><h3>ML Engineer Trainee</h3><p class="or">DEPI (Microsoft ML Track)</p></div>
-      <ul><li>Led a five-person Agile team through nine months of sprints, including planning, task allocation and code reviews.</li><li>Owned the FastAPI backend, Docker setup and GitHub Actions CI/CD for the Healthcare RAG capstone, and contributed to testing and evaluation.</li></ul></div>
-    <div class="row rv"><div><div class="mt">Sep 2025 – Oct 2025</div><h3>Machine Learning Intern</h3><p class="or">Elevvo Pathways</p></div>
-      <ul><li>Built four end-to-end projects across regression, clustering and classification.</li><li>Applied data cleaning, feature engineering, cross-validation and SMOTE to scikit-learn and XGBoost models.</li></ul></div>
+    <div class="row rv"><div><div class="mt">Nov 2025 – Jul 2026</div><h3>ML Engineer Trainee</h3><p class="or">DEPI (Microsoft ML Track)</p><div class="experience-links"><a href="https://drive.google.com/file/d/1133gfz_woogX-pmzqYcNwsTDxi7qrEiU/view" target="_blank" rel="noopener">View program certificate ↗</a></div></div>
+      <ul><li>Led a five-person Agile team through nine months of sprints, including planning, task allocation and code reviews.</li><li>Owned the FastAPI backend and Docker setup, and configured GitHub Actions CI to run 216 automated tests on every push and pull request.</li></ul></div>
+    <div class="row rv"><div><div class="mt">Sep 2025 – Oct 2025</div><h3>Machine Learning Intern</h3><p class="or">Elevvo Pathways</p><div class="experience-links"><a href="https://drive.google.com/file/d/13Gu40GQiXfXwzvNJC6cGfgwWcsbsc9H3/view?usp=sharing" target="_blank" rel="noopener">View internship certificate ↗</a></div></div>
+      <ul><li>Built four end-to-end projects across regression, clustering and classification.</li><li>Applied data cleaning, feature engineering and cross-validation, using SMOTE where appropriate and task-specific metrics to evaluate scikit-learn and XGBoost models.</li></ul></div>
   </div>
 </section>
 
 <section id="skills" class="band">
   <div class="w">
-    <h2 class="rv h2c" style="margin-bottom:2.5rem">Skills.</h2>
-    <div class="row rv"><h3>Generative AI &amp; LLMs</h3><div class="chips"><span>RAG</span><span>LangGraph</span><span>LangChain</span><span>Prompt engineering</span><span>FAISS</span><span>Cross-encoder reranking</span><span>Citation validation</span><span>Gemini</span><span>Groq / Cerebras</span></div></div>
-    <div class="row rv"><h3>Machine Learning</h3><div class="chips"><span>scikit-learn</span><span>XGBoost</span><span>Pandas</span><span>NumPy</span><span>Feature engineering</span><span>Cross-validation</span><span>SMOTE</span></div></div>
-    <div class="row rv"><h3>Backend &amp; DevOps</h3><div class="chips"><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span><span>GitHub Actions</span><span>MLflow</span></div></div>
-    <div class="row rv"><h3>Languages</h3><div class="chips"><span>Arabic (native)</span><span>English (professional)</span></div></div>
+    <div class="ci">
+      <h2 class="rv">Skills.</h2>
+      <p class="rv" style="--i:1">A practical stack across LLM applications, retrieval, machine learning and backend engineering.</p>
+    </div>
+    <div class="skill-grid">
+      <article class="skill-card rv">
+        <p class="skill-kicker">01 · LLM APPLICATIONS</p>
+        <h3>Generative AI &amp; Agents</h3>
+        <div class="chips"><span>RAG</span><span>Agentic workflows</span><span>LangGraph</span><span>LangChain</span><span>Prompt engineering</span><span>Gemini</span><span>Groq</span><span>Cerebras</span></div>
+      </article>
+      <article class="skill-card rv" style="--i:1">
+        <p class="skill-kicker">02 · GROUNDING &amp; QUALITY</p>
+        <h3>Retrieval &amp; Evaluation</h3>
+        <div class="chips"><span>BGE-M3</span><span>sentence-transformers</span><span>FAISS</span><span>Dense retrieval</span><span>Cross-encoder reranking</span><span>LLM-as-judge</span><span>Citation validation</span><span>Evidence-aware abstention</span></div>
+      </article>
+      <article class="skill-card rv">
+        <p class="skill-kicker">03 · MODELING</p>
+        <h3>Machine Learning</h3>
+        <div class="chips"><span>scikit-learn</span><span>XGBoost</span><span>Pandas</span><span>NumPy</span><span>Feature engineering</span><span>Cross-validation</span><span>SMOTE</span></div>
+      </article>
+      <article class="skill-card rv" style="--i:1">
+        <p class="skill-kicker">04 · APPLICATION ENGINEERING</p>
+        <h3>Backend &amp; DevOps</h3>
+        <div class="chips"><span>FastAPI</span><span>REST APIs</span><span>PostgreSQL</span><span>Redis</span><span>pytest</span><span>Docker</span><span>GitHub Actions</span><span>MLflow</span><span>Git</span></div>
+      </article>
+    </div>
+    <div class="skill-meta rv">
+      <div><span class="meta-label">Programming</span><div class="chips"><span>Python</span><span>SQL</span><span>C++</span></div></div>
+      <div><span class="meta-label">Languages</span><div class="chips"><span>Arabic · Native</span><span>English · Professional</span></div></div>
+    </div>
   </div>
 </section>
 
-<section id="education" aria-label="Education, certifications and competitive programming">
-  <div class="w g3">
-    <div class="rv"><h3>Education</h3><p>Cairo University<br>B.Sc. in Computers &amp; Artificial Intelligence<br>GPA 3.53 / 4.00 · Graduated Jul 2026</p></div>
-    <div class="rv" style="--i:1"><h3>Certifications</h3>
-      <a class="ln" href="https://coursera.org/share/436402401f7107ec6e04df759bd2d8a9" target="_blank" rel="noopener">Machine Learning Specialization</a>
-      <a class="ln" href="https://learn.nvidia.com/certificates?id=IdMQD3ZKSQCBsiWWQOus3w" target="_blank" rel="noopener">LLM Applications with Prompt Engineering</a>
-      <a class="ln" href="https://www.datacamp.com/completed/statement-of-accomplishment/track/a76d6c28d2847c46d99f8247cb085aa0a90996d8" target="_blank" rel="noopener">Associate Data Scientist in Python</a></div>
-    <div class="rv" style="--i:2"><h3>Competitive programming</h3><p>ECPC regionals 2023 &amp; 2024.</p>
-      <a class="ln" href="https://codeforces.com/profile/AbdoMatrix" target="_blank" rel="noopener">Codeforces</a>
-      <a class="ln" href="https://leetcode.com/u/AbdoMatrix/" target="_blank" rel="noopener">LeetCode</a>
-      <a class="ln" href="https://www.hackerrank.com/profile/AbdoMatrix" target="_blank" rel="noopener">HackerRank</a>
-      <a class="ln" href="https://icpc.global/ICPCID/18JHCIDNJMA5" target="_blank" rel="noopener">ICPC verified profile</a></div>
+<section id="education" class="band" aria-label="Education, courses and achievements">
+  <div class="w">
+    <div class="ci">
+      <h2 class="rv">Education &amp; credentials.</h2>
+      <p class="rv" style="--i:1">Academic background, completed training and competitive programming.</p>
+    </div>
+    <div class="credential-top">
+      <article class="credential-card rv">
+        <p class="skill-kicker">EDUCATION</p>
+        <h3>Cairo University</h3>
+        <p class="degree">B.Sc. in Computers &amp; Artificial Intelligence</p>
+        <div class="edu-facts"><strong>3.53 / 4.00</strong><span>GPA</span></div>
+        <p class="card-note">Graduated Jul 2026</p>
+      </article>
+      <article class="credential-card rv" style="--i:1">
+        <p class="skill-kicker">ICPC / ECPC</p>
+        <h3>Competitive programming</h3>
+        <div class="award-line"><strong>84th</strong><span>ECPC 2023 Regionals</span></div>
+        <div class="award-line"><strong>Honorable Mention</strong><span>ECPC 2025 Regionals</span></div>
+        <div class="profile-links">
+          <a href="https://codeforces.com/profile/AbdoMatrix" target="_blank" rel="noopener">Codeforces</a>
+          <a href="https://leetcode.com/u/AbdoMatrix/" target="_blank" rel="noopener">LeetCode</a>
+          <a href="https://www.hackerrank.com/profile/AbdoMatrix" target="_blank" rel="noopener">HackerRank</a>
+          <a href="https://icpc.global/ICPCID/18JHCIDNJMA5" target="_blank" rel="noopener">ICPC profile</a>
+        </div>
+      </article>
+    </div>
+    <h3 class="credential-heading rv">Courses &amp; professional certificates</h3>
+    <div class="cert-grid">
+      <a class="cert-card rv" href="https://coursera.org/share/436402401f7107ec6e04df759bd2d8a9" target="_blank" rel="noopener">
+        <span class="cert-provider">Stanford University · Coursera</span><strong>Machine Learning Specialization</strong><span class="cert-link">View certificate ↗</span>
+      </a>
+      <a class="cert-card rv" style="--i:1" href="https://learn.nvidia.com/certificates?id=IdMQD3ZKSQCBsiWWQOus3w" target="_blank" rel="noopener">
+        <span class="cert-provider">NVIDIA Deep Learning Institute</span><strong>Building LLM Applications with Prompt Engineering</strong><span class="cert-link">View certificate ↗</span>
+      </a>
+      <a class="cert-card rv" style="--i:2" href="https://www.datacamp.com/completed/statement-of-accomplishment/track/a76d6c28d2847c46d99f8247cb085aa0a90996d8" target="_blank" rel="noopener">
+        <span class="cert-provider">DataCamp</span><strong>Associate Data Scientist in Python</strong><span class="cert-link">View certificate ↗</span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -418,6 +512,17 @@ dialog.lb.mob{width:min(600px,94vw)}
 
 <script>
 const $=s=>[...document.querySelectorAll(s)];
+const nav=document.getElementById('nav');
+const car=document.getElementById('car');
+const pv=document.getElementById('pv');
+const nx=document.getElementById('nx');
+const li=document.getElementById('li');
+const lb=document.getElementById('lb');
+const dlg=document.getElementById('dlg');
+const fr=document.getElementById('fr');
+const dx=document.getElementById('dx');
+const lx=document.getElementById('lx');
+const zm=document.getElementById('zm');
 addEventListener('scroll',()=>nav.classList.toggle('s',scrollY>8),{passive:true});
 function count(el){if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;const to=+el.dataset.n,f=+el.dataset.f||0,s=el.dataset.s||'';let t0;const st=t=>{t0??=t;const p=Math.min((t-t0)/1400,1);el.textContent=(to*(1-Math.pow(1-p,3))).toFixed(f)+s;p<1&&requestAnimationFrame(st)};requestAnimationFrame(st)}
 const io=new IntersectionObserver(es=>{let k=0;es.forEach(e=>{if(!e.isIntersecting)return;if(e.target.matches('.sl'))e.target.style.setProperty('--i',k++);e.target.classList.add('on');e.target.querySelectorAll('[data-n]').forEach(count);io.unobserve(e.target)})},{threshold:.12});
